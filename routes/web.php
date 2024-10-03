@@ -7,4 +7,5 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [UserController::class, 'show']);
+Route::get('/', [UserController::class, 'showHome']);
+Route::get('/ourproduct', [UserController::class, 'showProduct']);
