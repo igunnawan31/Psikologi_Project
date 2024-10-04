@@ -21,4 +21,9 @@ class UserController extends Controller
     {
         return view('ourproduct');
     }
+
+    public function showCreate(): View
+    {
+        return view('createyourown');
+    }
 }
