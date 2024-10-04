@@ -12,7 +12,7 @@
     {{-- Start --}}
     <section id="Home" class="relative min-h-screen pb-36 pt-36 bg-cover bg-center" style="background-image: url('assets/HappyBirthday.jpg');">
         <!-- Set the opacity directly in the gradient colors using rgba or hex with alpha -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#A47EFD80] to-[#FF88E680]"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#C0E9ED80] to-[#FBB6C880]"></div>
         <div class="flex items-center justify-center h-full my-[10rem] relative z-10">
             <div class="container mx-auto lg:px-8">
                 <div class="mt-10 w-full flex items-center justify-center lg:pl-8">
@@ -21,9 +21,9 @@
                         <h2 class="mt-10 text-xl text-center font-bold text-black md:text-2xl lg:text-2xl">"Never forget the important dates of your loved ones again. Create meaningful and surprising online greeting cards with just a few clicks!"</h2>
                     </div>
                 </div>
-                <div class="flex items-center justify-center">
-                    <div class="flex justify-center mt-10 w-36 h-14 bg-white border-black border-2 rounded-lg">
-                        <h2 class="text-center font-bold text-xl flex items-center bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] text-transparent bg-clip-text cursor-pointer">
+                <div class="flex items-center justify-center"> 
+                    <div class="flex justify-center mt-10 w-36 h-14 bg-white hover:bg-black border-white border-2 rounded-lg ">
+                        <h2 class="text-center font-bold text-xl flex items-center bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] text-transparent bg-clip-text cursor-pointer ">
                             See More
                         </h2>
                     </div>
@@ -81,8 +81,8 @@
                 </div>
             </div>
             <div class="flex items-center justify-center">
-                <div class="flex justify-center mt-10 w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-black border-2 rounded-lg">
-                    <h2 class="text-center font-bold text-xl flex items-center text-black cursor-pointer">
+                <div class="flex justify-center mt-10 w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg">
+                    <h2 class="text-center font-bold text-xl flex items-center text-white cursor-pointer">
                         See More
                     </h2>
                 </div>
@@ -96,7 +96,7 @@
             <div class="container mx-auto pt-16 px-4 lg:px-8">
                 <div class="flex flex-wrap">
                     <div class="mb-10 flex">
-                        <h1 class="flex text-center items-center text-4xl font-bold bg-white text-transparent bg-clip-text">Our Product</h1>
+                        <h1 class="flex text-center items-center text-4xl font-bold bg-white text-transparent bg-clip-text">What We Provide</h1>
                     </div>
                 </div>
             </div>
