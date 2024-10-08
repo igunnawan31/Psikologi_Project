@@ -36,6 +36,9 @@
                     <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
                         Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
                     </div>
+                    <div>
+                        <a href="{{ url('auth/google') }}" class="bg-blue-600">Login using Google</a>
+                    </div>
                 </form>
             </div>
         </div>
