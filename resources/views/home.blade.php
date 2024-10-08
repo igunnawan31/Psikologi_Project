@@ -12,7 +12,7 @@
     {{-- Start --}}
     <section id="Home" class="relative min-h-screen pb-36 pt-36 bg-cover bg-center" style="background-image: url('assets/HappyBirthday.jpg');">
         <!-- Set the opacity directly in the gradient colors using rgba or hex with alpha -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#C0E9ED80] to-[#FBB6C880] "></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#C0E9ED80] to-[#FBB6C880]"></div>
         <div class="flex items-center justify-center h-full my-[10rem] relative z-10">
             <div class="container mx-auto lg:px-8">
                 <div class="mt-10 w-full flex items-center justify-center lg:pl-8">

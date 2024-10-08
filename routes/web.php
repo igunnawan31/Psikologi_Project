@@ -10,3 +10,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [UserController::class, 'showHome']);
 Route::get('/ourproduct', [UserController::class, 'showProduct']);
 Route::get('/createyourown', [UserController::class, 'showCreate']);
+Route::get('/login', [UserController::class, 'showLogin']);

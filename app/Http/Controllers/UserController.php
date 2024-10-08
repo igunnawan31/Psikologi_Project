@@ -26,4 +26,9 @@ class UserController extends Controller
     {
         return view('createyourown');
     }
+
+    public function showLogin(): View
+    {
+        return view('login');
+    }
 }
