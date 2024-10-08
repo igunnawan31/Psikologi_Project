@@ -12,7 +12,7 @@
     <section id="Home" class="pt-36 pb-36">
         <div class="container mx-auto">
             <div class="flex justify-center items-center text-center">
-                <h2 class="text-5xl font-bold bg-gradient-to-b from-[#A47EFD] to-[#FF88E6] text-transparent bg-clip-text">
+                <h2 class="text-5xl mx-auto font-bold h-20 bg-gradient-to-b from-[#A47EFD] to-[#FF88E6] text-transparent bg-clip-text  ">
                     Looking for Something that you gonna loved
                 </h2>
             </div>
