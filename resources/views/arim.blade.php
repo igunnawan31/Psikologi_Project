@@ -7,6 +7,7 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -17,20 +18,21 @@
         }
 
         .wrapper {
-            background-image: url("amara.svg");
+            background-image: url("Arim.svg");
             height: 602px;
             width: 338px;
             z-index: 1;
             display: flex;
             justify-content: center;
             position: relative;
+            overflow: hidden;
         }
 
         .title {
             position: absolute;
-            top: 65px; /* Adjust this based on where you want the text to appear */
-            left: 25px;
-            width: 200px;
+            top: 160px; /* Adjust this based on where you want the text to appear */
+            left: 115px;
+            width: 240px;
             height: 200px;
             display: flex;
             justify-content: center;
@@ -42,28 +44,31 @@
         .title-display {
             position: relative;
             font-family: 'Baloo', sans-serif;
-            font-size: 30px;
-            text-transform: uppercase; /* Match the style in the image */
-            letter-spacing: 2px;
-            color: rgb(190, 105, 24);
+            font-size: 35px;
+            text-transform: none; /* Match the style in the image */
+            letter-spacing: 1px;
+            color: #af753e;
+            text-align: center;
+            line-height: 1;
+            font-weight: bold;
+            overflow-wrap: break-word; 
+            word-wrap: break-word;     
+            word-break: break-word;    
+            overflow: hidden;
+            text-shadow: 2px 2px #ffffff ;
         }
-
-        .title-display span {
-            position: absolute;
-            transform-origin: 100px 100px; /* Origin at the center of the circle */
-        }
-
 
         .text-wrapper .text-display{
-            height: 200px;
-            width: 200px;
+            height: 180px;
+            width: 220px;
+            font-family: 'Mistrully', sans-serif;
             position: absolute;
             text-align: center;
             font-size: large;
-            left: 33px;
-            top: 93px;
-            border-radius: 50%;
-            color: aliceblue;
+            left: 93px;
+            top: 270px;
+            border-radius: 2%;
+            color: #af753e;
             background-color: transparent;  
             resize: none;
             border: 2px solid white;
@@ -90,35 +95,38 @@
         }
 
         #foto1 {
-            left: 170px;
-            top: 225px;
-            width: 160px;
-            height: 165px;
-            border: 8px solid rgb(247, 200, 114);
+            left: 200px;
+            top: 15px;
+            width: 120px;
+            height: 120px;
+            border: 6px solid #d3a274;
         }
 
         #foto2 {
-            left: 170px;
-            top: 382px;
-            width: 160px;
-            height: 165px;
-            border: 8px solid rgb(247, 200, 114);
+            left: 105px;
+            top: 82px;
+            width: 120px;
+            height: 120px;
+            border: 3px solid #d3a274;
+            z-index: 3;
         }
 
         #foto3 {
-            left: 350px;
-            top: 390px;
-            width: 140px;
-            height: 98px;
-            border: 3px solid rgb(247, 200, 114);
+            left: 320px;
+            top: 338px;
+            width: 110px;
+            height: 110px;
+            border: 3px solid #d3a274;
+            transform: rotate(-5deg);
         }
 
         #foto4 {
-            left: 350px;
-            top: 490px;
-            width: 140px;
-            height: 98px;
-            border: 3px solid rgb(247, 200, 114);
+            left: 329px;
+            top: 445px;
+            width: 110px;
+            height: 110px;
+            border: 3px solid #d3a274;
+            transform: rotate(-5deg);
         }
 
         .foto img {
@@ -129,7 +137,7 @@
     </style>
 </head>
 <body>
-    
+
     <div class="wrapper">
         <div class="title">
             <div class="title-display" id="displayTitle"></div>
@@ -190,30 +198,13 @@
         }
 
         function updateTitle() {
-            const titleText = document.getElementById("upload6").value;
-            const titleDisplay = document.getElementById("displayTitle");
+            // Get the input value
+            const inputText = document.getElementById("upload6").value;
 
-            // Clear the existing content
-            titleDisplay.innerHTML = '';
-
-            const radius = 100;  // Radius of the circle
-            const angleStep = 180 / (titleText.length - 1);  // Distribute only across the top half
-
-            titleText.split('').forEach((char, index) => {
-                const span = document.createElement('span');
-                span.innerText = char;
-
-                // Calculate the angle for each letter (we're rotating from the center, outward)
-                const angle = -180 + (index * angleStep); // Start at -90 (top center), curve to right
-                
-                // First rotate by angle, translate outward from the center, then rotate back to make the letter upright
-                span.style.position = 'absolute';  // Ensure the letters position themselves on the circle
-                span.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(${angle * -1}deg)`;
-
-                // Append the letter span to the title display container
-                titleDisplay.appendChild(span);
-            });
+            // Set the display div's content to the input value
+            document.getElementById("displayTitle").innerText = inputText;
         }
+
 
         // Function to handle image upload and replace the landscape
         function uploadImage(input, imgElement) {

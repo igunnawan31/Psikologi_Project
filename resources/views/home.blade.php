@@ -44,15 +44,15 @@
                     <div class="relative h-56 overflow-hidden rounded-lg md:h-[32rem]">
                         <!-- Item 1 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                            <img src="/assets/HappyBirthday.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            <img src="/assets/amara.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                         </div>
                         <!-- Item 2 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="/assets/HappyBirthday.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            <img src="/assets/Devity.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                         </div>
                         <!-- Item 3 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="/assets/HappyBirthday.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            <img src="/assets/Arim.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                         </div>
                     </div>
                     <!-- Slider indicators -->
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="flex items-center justify-center">
-                <div class="flex justify-center mt-10 w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg">
+                <div class="flex justify-center mt-10 w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] hover:bg-white border-white border-2 rounded-lg">
                     <h2 class="text-center font-bold text-xl flex items-center text-white cursor-pointer">
                         See More
                     </h2>

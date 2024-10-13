@@ -22,16 +22,16 @@
         <div class="flex items-center justify-center">
             <div class="flex items-center justify-center space-x-5"> <!-- Added flex and space between -->
                 <!-- Image 1 -->
-                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-blue-700 transition duration-300 ease-in-out">
-                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
+                    <img src="/assets/Devity.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
                 </div>
                 <!-- Image 2 -->
-                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-blue-700 transition duration-300 ease-in-out">
-                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
+                    <img src="/assets/amara.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
                 </div>
                 <!-- Image 3 -->
-                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-blue-700 transition duration-300 ease-in-out">
-                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
+                    <img src="/assets/Arim.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
                 </div>
             </div>
         </div>
@@ -40,8 +40,8 @@
 
     <section id="PreviewTemplates" class="pt-10 pb-10">
         <div class="flex items-center justify-center">
-            <div class="max-w-2xl h-full border-blue-700 border-2">
-                <img src="/assets/HappyBirthday.jpg" alt="Contoh 3" class="p-5">
+            <div class="max-w-2xl h-full border-pink-500 border-2">
+                <img src="/assets/amara.png" alt="Contoh 3" class="p-5">
             </div>
         </div>
     </section>
