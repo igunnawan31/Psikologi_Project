@@ -31,4 +31,19 @@ class UserController extends Controller
     {
         return view('login');
     }
+
+    public function showtemplates() : View
+    {
+        return view('pickyourtemplates');
+    }
+
+    public function showpreview() : View
+    {
+        return view('preview');
+    }
+
+    public function showform() : View
+    {
+        return view('form');
+    }
 }
