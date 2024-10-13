@@ -18,21 +18,25 @@
       </div>
     </section>
 
-    <section id="Templates" class="pt-10 pb-10">
-        <div class="flex items-center justify-center h-screen"> <!-- Center the content vertically and horizontally -->
-            <div class="border-blue-700 border-2 h-40 w-40 flex items-center justify-center overflow-hidden">
-                <div class="px-2">
-                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40">
+    <section id="Templates" class="">
+        <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center space-x-5"> <!-- Added flex and space between -->
+                <!-- Image 1 -->
+                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-blue-700 transition duration-300 ease-in-out">
+                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
                 </div>
-                <div class="px-2">
-                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40">
+                <!-- Image 2 -->
+                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-blue-700 transition duration-300 ease-in-out">
+                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
                 </div>
-                <div class="px-2">
-                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40">
+                <!-- Image 3 -->
+                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-blue-700 transition duration-300 ease-in-out">
+                    <img src="/assets/HappyBirthday.jpg" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section id="PreviewTemplates" class="pt-10 pb-10">
         <div class="flex items-center justify-center">
@@ -42,22 +46,24 @@
         </div>
     </section>
 
-    <div class="flex justify-center items-center">
-        <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-            <a href="/createyourown">
-                <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
-                    Back
-                </h2>
-            </a>
+    <section id="button" class="pt-10 pb-10">
+        <div class="flex justify-center items-center">
+            <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                <a href="/createyourown">
+                    <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
+                        Back
+                    </h2>
+                </a>
+            </div>
+            <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
+                <a href="/createyourown/pickyourtemplates/form">
+                    <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
+                        Selanjutnya
+                    </h2>
+                </a>
+            </div>
         </div>
-        <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
-            <a href="/createyourown/pickyourtemplates/form">
-                <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
-                    Selanjutnya
-                </h2>
-            </a>
-        </div>
-    </div>
+    </section>
       
 </body>
 </html>

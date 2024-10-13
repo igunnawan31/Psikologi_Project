@@ -46,4 +46,9 @@ class UserController extends Controller
     {
         return view('form');
     }
+
+    public function showpayment() : View
+    {
+        return view('payment');
+    }
 }

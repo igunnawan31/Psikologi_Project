@@ -15,7 +15,7 @@ Route::get('/login', [UserController::class, 'showLogin']);
 Route::get('/createyourown/pickyourtemplates', [UserController::class, 'showtemplates']);
 Route::get('/createyourown/pickyourtemplates/form', [UserController::class, 'showform']);
 Route::get('/createyourown/pickyourtemplates/form/preview', [UserController::class, 'showPreview']);
-Route::get('/createyourown/pickyourtemplates/form/preview/payment', [UserController::class, 'showPayment']);
+Route::get('/createyourown/pickyourtemplates/form/preview/payment', [UserController::class, 'showpayment']);
 
 Route::get('auth/google', [GoogleController::class, 'googlepage']);
 Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
