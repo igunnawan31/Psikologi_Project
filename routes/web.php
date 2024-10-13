@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PdfController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\GoogleController;
 
 // Route::get('/', function () {
@@ -19,3 +21,9 @@ Route::get('/createyourown/pickyourtemplates/form/preview/payment', [UserControl
 
 Route::get('auth/google', [GoogleController::class, 'googlepage']);
 Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
+
+Route::post('/sendEmail', [EmailController::class,'sendEmail']) -> name('send.email');
+Route::get('/generate-pdf', [PdfController::class, 'generatePDF']);
+Route::get('/contact', function() {
+    return view('contact');
+})->name('contact');
