@@ -45,7 +45,7 @@
         <div class="container mx-auto">
             <div class="my-10 max-w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg w-full h-80 object-cover" src="assets/HappyBirthday.jpg" alt="Birthday Image" />
+                    <img class="rounded-t-lg w-full h-80 object-cover" src="assets/amara.png" alt="amara" />
                 </a>
                 <div class="p-5">
                     <a href="#">
@@ -63,7 +63,7 @@
 
             <div class=" my-10 max-w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg w-full h-80 object-cover" src="assets/HappyBirthday.jpg" alt="Birthday Image" />
+                    <img class="rounded-t-lg w-full h-80 object-cover" src="assets/Devity.png" alt="devity" />
                 </a>
                 <div class="p-5">
                     <a href="#">
@@ -81,7 +81,7 @@
 
             <div class=" my-10 max-w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg w-full h-80 object-cover" src="assets/HappyBirthday.jpg" alt="Birthday Image" />
+                    <img class="rounded-t-lg w-full h-80 object-cover" src="assets/fai.png" alt="fai" />
                 </a>
                 <div class="p-5">
                     <a href="#">

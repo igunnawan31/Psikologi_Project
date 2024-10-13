@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -17,7 +17,7 @@
         }
 
         .wrapper {
-            background-image: url("amara.svg");
+            background-image: url("fai.png");
             height: 602px;
             width: 338px;
             z-index: 1;
@@ -28,43 +28,39 @@
 
         .title {
             position: absolute;
-            top: 65px; /* Adjust this based on where you want the text to appear */
-            left: 25px;
-            width: 200px;
+            top: 60px; /* Adjust this based on where you want the text to appear */
+            left: 20px;
+            width: 250px;
             height: 200px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            text-align: left;
             pointer-events: none; /* Ensure it doesn't block interaction */
             z-index: 2;
+            transform: rotate(-4deg);
         }
 
         .title-display {
             position: relative;
-            font-family: 'Baloo', sans-serif;
-            font-size: 30px;
-            text-transform: uppercase; /* Match the style in the image */
+            font-family: 'Mistrully', sans-serif;
+            font-size: 25px;
+            text-transform:none; /* Match the style in the image */
             letter-spacing: 2px;
-            color: rgb(190, 105, 24);
+            color: #9d4b3b;
+            font-weight: 800;
         }
-
-        .title-display span {
-            position: absolute;
-            transform-origin: 100px 100px; /* Origin at the center of the circle */
-        }
-
 
         .text-wrapper .text-display{
-            height: 200px;
-            width: 200px;
+            height: 180px;
+            width: 180px;
             position: absolute;
             text-align: center;
             font-size: large;
-            left: 33px;
-            top: 93px;
-            border-radius: 50%;
-            color: aliceblue;
-            background-color: transparent;  
+            left: 145px;
+            top: 283px;
+            border-radius: 2%;
+            color: #6e6e6e;
+            background-color: white;  
             resize: none;
             border: 2px solid white;
             line-height: 1.5;
@@ -77,6 +73,7 @@
             word-wrap: break-word;     
             word-break: break-word;    
             overflow: hidden;
+            z-index: 2;
         }
 
         .foto{
@@ -90,35 +87,35 @@
         }
 
         #foto1 {
-            left: 170px;
-            top: 225px;
-            width: 160px;
-            height: 165px;
-            border: 8px solid rgb(247, 200, 114);
+            left: 0px;
+            top: 85px;
+            width: 338px;
+            height: 240px;
+            z-index: 1;
         }
 
         #foto2 {
-            left: 170px;
-            top: 382px;
-            width: 160px;
-            height: 165px;
-            border: 8px solid rgb(247, 200, 114);
+            left: 25px;
+            top: 215px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
         }
 
         #foto3 {
-            left: 350px;
-            top: 390px;
-            width: 140px;
-            height: 98px;
-            border: 3px solid rgb(247, 200, 114);
+            left: 25px;
+            top: 315px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
         }
 
         #foto4 {
-            left: 350px;
-            top: 490px;
-            width: 140px;
-            height: 98px;
-            border: 3px solid rgb(247, 200, 114);
+            left: 25px;
+            top: 415px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
         }
 
         .foto img {
@@ -126,13 +123,18 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .decor{
+            background: transparent;
+            z-index: 4;
+        }
     </style>
 </head>
 <body>
-    
+
     <div class="wrapper">
         <div class="title">
-            <div class="title-display" id="displayTitle"></div>
+            <div class="title-display" id="displayTitle">Title here</div>
         </div>
         <div class="text-wrapper">
             <div class="text-display" id="displayText">Place Your Message here</div>
@@ -143,13 +145,14 @@
         <div class="foto" id="foto2">
             <img src="crot.png" alt="foto2">
         </div>
-        </div>
         <div class="foto" id="foto3" >
             <img src="crot.png" alt="foto3">
         </div>
-        </div>
         <div class="foto" id="foto4">
             <img src="crot.png" alt="foto4">
+        </div>
+        <div class="decor" id="foto5">
+            <img src="decor_fai.png" alt="foto4">
         </div>
     </div>
 
@@ -190,30 +193,13 @@
         }
 
         function updateTitle() {
-            const titleText = document.getElementById("upload6").value;
-            const titleDisplay = document.getElementById("displayTitle");
+            // Get the input value
+            const inputText = document.getElementById("upload6").value;
 
-            // Clear the existing content
-            titleDisplay.innerHTML = '';
-
-            const radius = 100;  // Radius of the circle
-            const angleStep = 180 / (titleText.length - 1);  // Distribute only across the top half
-
-            titleText.split('').forEach((char, index) => {
-                const span = document.createElement('span');
-                span.innerText = char;
-
-                // Calculate the angle for each letter (we're rotating from the center, outward)
-                const angle = -180 + (index * angleStep); // Start at -90 (top center), curve to right
-                
-                // First rotate by angle, translate outward from the center, then rotate back to make the letter upright
-                span.style.position = 'absolute';  // Ensure the letters position themselves on the circle
-                span.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(${angle * -1}deg)`;
-
-                // Append the letter span to the title display container
-                titleDisplay.appendChild(span);
-            });
+            // Set the display div's content to the input value
+            document.getElementById("displayTitle").innerText = inputText;
         }
+
 
         // Function to handle image upload and replace the landscape
         function uploadImage(input, imgElement) {
