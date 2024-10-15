@@ -12,7 +12,7 @@ use App\Http\Controllers\PesananController;
 // });
 
 
-Route::get('/', [UserController::class, 'showHome']);
+Route::get('/', [UserController::class, 'showHome'])->name('home');
 Route::get('/ourproduct', [UserController::class, 'showProduct']);
 Route::get('/createyourown', [UserController::class, 'showCreate']);
 Route::get('/login', [UserController::class, 'showLogin']);
