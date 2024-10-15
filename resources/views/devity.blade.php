@@ -17,7 +17,7 @@
         }
 
         .wrapper {
-            background-image: url("Devity.svg");
+            background-image: url("assets/Devity.svg");
             height: 602px;
             width: 338px;
             z-index: 1;

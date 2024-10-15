@@ -17,7 +17,7 @@
         }
 
         .wrapper {
-            background-image: url("amara.svg");
+            background-image: url("assets/amara.svg");
             height: 602px;
             width: 338px;
             z-index: 1;
