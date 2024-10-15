@@ -17,7 +17,7 @@
         }
 
         .wrapper {
-            background-image: url("fai.png");
+            background-image: url("assets/fai.png");
             height: 602px;
             width: 338px;
             z-index: 1;

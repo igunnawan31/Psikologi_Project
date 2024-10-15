@@ -27,3 +27,15 @@ Route::get('/generate-pdf', [PdfController::class, 'generatePDF']);
 Route::get('/contact', function() {
     return view('contact');
 })->name('contact');
+Route::get('/amara', function() {
+    return view('amara');
+})->name('amara');
+Route::get('/arim', function() {
+    return view('arim');
+})->name('arim');
+Route::get('/fai', function() {
+    return view('fai');
+})->name('fai');
+Route::get('/devity', function() {
+    return view('devity');
+})->name('devity');
