@@ -106,16 +106,16 @@
         }
 
         #foto3 {
-            left: 350px;
-            top: 390px;
+            left: 20px;
+            top: 290px;
             width: 140px;
             height: 98px;
             border: 3px solid rgb(247, 200, 114);
         }
 
         #foto4 {
-            left: 350px;
-            top: 490px;
+            left: 20px;
+            top: 390px;
             width: 140px;
             height: 98px;
             border: 3px solid rgb(247, 200, 114);

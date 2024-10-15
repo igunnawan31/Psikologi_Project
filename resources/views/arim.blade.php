@@ -112,8 +112,8 @@
         }
 
         #foto3 {
-            left: 320px;
-            top: 338px;
+            left: 5px;
+            top: 248px;
             width: 110px;
             height: 110px;
             border: 3px solid #d3a274;
@@ -121,8 +121,8 @@
         }
 
         #foto4 {
-            left: 329px;
-            top: 445px;
+            left: 15px;
+            top: 355px;
             width: 110px;
             height: 110px;
             border: 3px solid #d3a274;

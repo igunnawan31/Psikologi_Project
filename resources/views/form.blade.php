@@ -26,7 +26,7 @@
         </div>
         <div class="mb-5">
             <label for="large-input" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Email Penerima</label>
-            <input type="text" id="large-input" class="block w-full p-4 text-pink-500 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
+            <input type="text" id="large-input" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
         </div>
         <div class="mb-5">
             <label for="large-input" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Tanggal Kirim</label>
