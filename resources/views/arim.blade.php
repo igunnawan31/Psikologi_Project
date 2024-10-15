@@ -18,7 +18,7 @@
         }
 
         .wrapper {
-            background-image: url("Arim.svg");
+            background-image: url("assets/Arim.svg");
             height: 602px;
             width: 338px;
             z-index: 1;
