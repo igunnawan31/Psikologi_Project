@@ -17,7 +17,7 @@
         }
 
         .wrapper {
-            background-image: url("amara.svg");
+            background-image: url("assets/amara.svg");
             height: 602px;
             width: 338px;
             z-index: 1;
@@ -106,16 +106,16 @@
         }
 
         #foto3 {
-            left: 350px;
-            top: 390px;
+            left: 20px;
+            top: 290px;
             width: 140px;
             height: 98px;
             border: 3px solid rgb(247, 200, 114);
         }
 
         #foto4 {
-            left: 350px;
-            top: 490px;
+            left: 20px;
+            top: 390px;
             width: 140px;
             height: 98px;
             border: 3px solid rgb(247, 200, 114);
@@ -143,10 +143,8 @@
         <div class="foto" id="foto2">
             <img src="crot.png" alt="foto2">
         </div>
-        </div>
         <div class="foto" id="foto3" >
             <img src="crot.png" alt="foto3">
-        </div>
         </div>
         <div class="foto" id="foto4">
             <img src="crot.png" alt="foto4">
