@@ -7,12 +7,17 @@
     <title>Pick Your Templates</title>
 </head>
 <body>
+    @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
     <x-header></x-header>
     <section id="Preview" class="pt-10 pb-10">
       <div class="container mx-auto">
           <div class="flex justify-center items-center text-center">
               <h2 class="text-2xl mx-auto font-bold my-10 bg-gradient-to-b from-[#A47EFD] to-[#FF88E6] text-transparent bg-clip-text  ">
-                  Pick Your Templates
+                  Preview
               </h2>
           </div>
       </div>

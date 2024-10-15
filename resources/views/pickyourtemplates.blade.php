@@ -20,31 +20,36 @@
 
     <section id="Templates" class="">
         <div class="flex items-center justify-center">
-            <div class="flex items-center justify-center space-x-5"> <!-- Added flex and space between -->
+            <div class="flex items-center justify-center space-x-5">
                 <!-- Image 1 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img src="/assets/Devity.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Devity.png" src="/assets/Devity.png" alt="contoh 1">
                 </div>
                 <!-- Image 2 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img src="/assets/amara.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/amara.png" src="/assets/amara.png" alt="contoh 2">
                 </div>
                 <!-- Image 3 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img src="/assets/Arim.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Arim.png" src="/assets/Arim.png" alt="contoh 3">
+                </div>
+                <!-- Image 4 -->
+                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Fai.png" src="/assets/Fai.png" alt="contoh 4">
                 </div>
             </div>
         </div>
     </section>
     
-
     <section id="PreviewTemplates" class="pt-10 pb-10">
         <div class="flex items-center justify-center">
-            <div class="max-w-2xl h-full border-pink-500 border-2">
-                <img src="/assets/amara.png" alt="Contoh 3" class="p-5">
+            <div id="imagepreview" class="max-w-2xl h-full border-pink-500 border-2">
+                <img id="previewImage" src="/assets/amara.png" alt="Contoh 3" class="p-5">
             </div>
         </div>
     </section>
+    
+    
 
     <section id="button" class="pt-10 pb-10">
         <div class="flex justify-center items-center">
@@ -64,6 +69,8 @@
             </div>
         </div>
     </section>
+
+    <script src="{{ asset('js/app.js') }}"></script>
       
 </body>
 </html>
