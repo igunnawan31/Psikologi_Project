@@ -13,7 +13,7 @@ class Template extends Model
     protected $table = 'templates';
 
     // Specify which fields are mass assignable
-    protected $fillable = ['namatemplate', 'pathtemplate', 'description', 'title'];
+    protected $fillable = ['namatemplate', 'pathtemplate', 'deskripsitemplate', 'title'];
 
     // You can define any relationships here if needed for recursion
 }
