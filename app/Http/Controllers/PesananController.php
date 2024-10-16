@@ -35,8 +35,8 @@ class PesananController extends Controller
             'emailpenerima' => 'required|email|max:255',
             'tanggalkirim' => 'required|date',
             'waktukirim' => 'required',
-            'judul' => 'required|string|max:255',
-            'pesan' => 'required|string',
+            'subject' => 'required|string|max:255',
+            'bodyEmail' => 'string',
         ]);
 
         // Create a new Pesanan record

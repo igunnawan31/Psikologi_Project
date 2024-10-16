@@ -46,16 +46,16 @@
             <input type="time" id="waktukirim" name="waktukirim" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
         </div>
 
-        <!-- Judul -->
+        <!-- Subject -->
         <div class="mb-5">
-            <label for="judul" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Judul</label>
-            <input type="text" id="judul" name="judul" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
+            <label for="Subject" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Subject</label>
+            <input type="text" id="Subject" name="Subject" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
         </div>
 
-        <!-- Pesan -->
+        <!-- Body Email -->
         <div class="mb-5">
-            <label for="pesan" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Pesan</label>
-            <textarea id="pesan" name="pesan" class="block w-full h-60 p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700"></textarea>
+            <label for="bodyEmail" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">bodyEmail</label>
+            <textarea id="bodyEmail" name="bodyEmail" class="block w-full h-60 p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700"></textarea>
         </div>
 
         <!-- Submit Button -->

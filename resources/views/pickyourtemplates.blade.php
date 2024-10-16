@@ -35,7 +35,7 @@
                 </div>
                 <!-- Image 4 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Fai.png" src="/assets/Fai.png" alt="contoh 4">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/fai.png" src="/assets/fai.png" alt="contoh 4">
                 </div>
             </div>
         </div>
