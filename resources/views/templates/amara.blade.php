@@ -36,37 +36,44 @@
             </div>
         </div>
 
-        <div class="upload bg-white p-6 rounded-lg shadow-lg w-96 h-[602px] border-2 border-black ml-10">
-            <h2 class="text-xl font-bold mb-4 text-gray-700">Upload Your Text for Amara</h2>
+        <div class="upload bg-white p-6 rounded-lg shadow-lg w-96 h-[602px] border-2 border-pink-500 ml-10">
+            <h2 class="text-xl font-bold mb-4 text-pink-500">Upload Your Text for Amara</h2>
 
             <div class="mb-4">
                 <label for="upload1" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
-                <input type="file" id="upload1" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+                <input type="file" id="upload1" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload1Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
             </div>
-
+            
             <div class="mb-4">
                 <label for="upload2" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
-                <input type="file" id="upload2" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+                <input type="file" id="upload2" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload2Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
             </div>
-
+            
             <div class="mb-4">
                 <label for="upload3" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
-                <input type="file" id="upload3" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+                <input type="file" id="upload3" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload3Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
             </div>
-
+            
             <div class="mb-4">
                 <label for="upload4" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
-                <input type="file" id="upload4" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+                <input type="file" id="upload4" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload4Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
             </div>
-
+            
             <div class="mb-4">
                 <label for="upload5" class="block text-sm font-medium text-gray-700 mb-2">Message:</label>
-                <input type="text" id="upload5" placeholder="Place your message here" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateText()">
+                <input type="text" id="upload5" placeholder="Place your message here" maxlength="100" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateText(); validateInputs();">
+                <span id="messageError" class="text-red-500 text-sm hidden">Please enter a message (max 100 characters).</span>
+                <span id="charCount" class="text-gray-500 text-sm">0/100</span>
             </div>
-
-            <div class="">
+            
+            <div class="mb-4">
                 <label for="upload6" class="block text-sm font-medium text-gray-700 mb-2">Title:</label>
-                <input type="text" id="upload6" placeholder="Place your title here" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateTitle()">
+                <input type="text" id="upload6" placeholder="Place your title here" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateTitle(); validateInputs();">
+                <span id="titleError" class="text-red-500 text-sm hidden">Please enter a title.</span>
             </div>
         </div>
     </section>

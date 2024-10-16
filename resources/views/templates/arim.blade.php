@@ -38,7 +38,7 @@
         </div>
 
         <div class="upload bg-white p-6 rounded-lg shadow-lg w-96 h-[602px] border-2 border-black ml-10">
-            <h2 class="text-xl font-bold mb-4 text-gray-700">Upload Your Text for Amara</h2>
+            <h2 class="text-xl font-bold mb-4 text-gray-700">Upload Your Text for Arim</h2>
 
             <div class="mb-4">
                 <label for="upload1" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
