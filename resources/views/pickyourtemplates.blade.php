@@ -20,31 +20,36 @@
 
     <section id="Templates" class="">
         <div class="flex items-center justify-center">
-            <div class="flex items-center justify-center space-x-5"> <!-- Added flex and space between -->
+            <div class="flex items-center justify-center space-x-5">
                 <!-- Image 1 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img src="/assets/Devity.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Devity.png" data-template-src="{{url('/templates/devity')}}" src="/assets/Devity.png" alt="contoh 1">
                 </div>
                 <!-- Image 2 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img src="/assets/amara.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/amara.png" data-template-src="{{url('/templates/amara')}}" src="/assets/amara.png" alt="contoh 2">
                 </div>
                 <!-- Image 3 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img src="/assets/Arim.png" alt="contoh 1" class="object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Arim.png" data-template-src="{{url('/templates/arim')}}" src="/assets/Arim.png" alt="contoh 3">
+                </div>
+                <!-- Image 4 -->
+                <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/fai.png" data-template-src="{{url('/templates/fai')}}" src="/assets/fai.png" alt="contoh 4">
                 </div>
             </div>
         </div>
     </section>
     
-
     <section id="PreviewTemplates" class="pt-10 pb-10">
         <div class="flex items-center justify-center">
-            <div class="max-w-2xl h-full border-pink-500 border-2">
-                <img src="/assets/amara.png" alt="Contoh 3" class="p-5">
+            <div id="imagepreview" class="max-w-2xl h-full border-pink-500 border-2">
+                <img id="previewImage" src="/assets/amara.png" alt="Contoh 3" class="p-5">
             </div>
         </div>
     </section>
+    
+    
 
     <section id="button" class="pt-10 pb-10">
         <div class="flex justify-center items-center">
@@ -56,7 +61,7 @@
                 </a>
             </div>
             <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
-                <a href="/createyourown/pickyourtemplates/form">
+                <a id="templatePath" href="{{route('amara')}}">
                     <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
                         Selanjutnya
                     </h2>
@@ -64,6 +69,8 @@
             </div>
         </div>
     </section>
+
+    <script src="{{ asset('js/app.js') }}"></script>
       
 </body>
 </html>

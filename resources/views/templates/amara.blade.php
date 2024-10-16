@@ -17,7 +17,7 @@
         }
 
         .wrapper {
-            background-image: url("assets/amara.svg");
+            background-image: url("/assets/amara.svg");
             height: 602px;
             width: 338px;
             z-index: 1;
@@ -177,69 +177,69 @@
             <input type="text" id="upload6" placeholder="Place your title here" oninput="updateTitle()">
         </div>
     </div>
-
+    
     <script>
         function updateText() {
             // Get the input value
             const inputText = document.getElementById("upload5").value;
-
+    
             // Set the display div's content to the input value
             document.getElementById("displayText").innerText = inputText;
         }
-
+    
         function updateTitle() {
             const titleText = document.getElementById("upload6").value;
             const titleDisplay = document.getElementById("displayTitle");
-
+    
             // Clear the existing content
             titleDisplay.innerHTML = '';
-
+    
             const radius = 100;  // Radius of the circle
             const angleStep = 180 / (titleText.length - 1);  // Distribute only across the top half
-
+    
             titleText.split('').forEach((char, index) => {
                 const span = document.createElement('span');
                 span.innerText = char;
-
+    
                 // Calculate the angle for each letter (we're rotating from the center, outward)
                 const angle = -180 + (index * angleStep); // Start at -90 (top center), curve to right
                 
                 // First rotate by angle, translate outward from the center, then rotate back to make the letter upright
                 span.style.position = 'absolute';  // Ensure the letters position themselves on the circle
                 span.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(${angle * -1}deg)`;
-
+    
                 // Append the letter span to the title display container
                 titleDisplay.appendChild(span);
             });
         }
-
+    
         // Function to handle image upload and replace the landscape
         function uploadImage(input, imgElement) {
             const file = input.files[0];
             const reader = new FileReader();
-
+    
             reader.onload = function(e) {
                 imgElement.src = e.target.result;  // Set the new image source
             };
-
+    
             if (file) {
                 reader.readAsDataURL(file);  // Convert file to a Data URL
             }
         }
-
+    
         // Event listeners for each upload input
         document.getElementById('upload1').addEventListener('change', function() {
             uploadImage(this, document.querySelector('#foto1 img'));
         });
-
+    
         document.getElementById('upload2').addEventListener('change', function() {
             uploadImage(this, document.querySelector('#foto2 img'));
         });
-
+    
         document.getElementById('upload3').addEventListener('change', function() {
             uploadImage(this, document.querySelector('#foto3 img'));
         });
-
+    
         document.getElementById('upload4').addEventListener('change', function() {
             uploadImage(this, document.querySelector('#foto4 img'));
         });

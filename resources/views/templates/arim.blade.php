@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
     <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
     <style>
         body {
@@ -17,50 +18,58 @@
         }
 
         .wrapper {
-            background-image: url("assets/fai.png");
+            background-image: url("/assets/Arim.svg");
             height: 602px;
             width: 338px;
             z-index: 1;
             display: flex;
             justify-content: center;
             position: relative;
+            overflow: hidden;
         }
 
         .title {
             position: absolute;
-            top: 60px; /* Adjust this based on where you want the text to appear */
-            left: 20px;
-            width: 250px;
+            top: 160px; /* Adjust this based on where you want the text to appear */
+            left: 115px;
+            width: 240px;
             height: 200px;
             display: flex;
-            justify-content: left;
-            text-align: left;
+            justify-content: center;
+            align-items: center;
             pointer-events: none; /* Ensure it doesn't block interaction */
             z-index: 2;
-            transform: rotate(-4deg);
         }
 
         .title-display {
             position: relative;
-            font-family: 'Mistrully', sans-serif;
-            font-size: 25px;
-            text-transform:none; /* Match the style in the image */
-            letter-spacing: 2px;
-            color: #9d4b3b;
-            font-weight: 800;
+            font-family: 'Baloo', sans-serif;
+            font-size: 35px;
+            text-transform: none; /* Match the style in the image */
+            letter-spacing: 1px;
+            color: #af753e;
+            text-align: center;
+            line-height: 1;
+            font-weight: bold;
+            overflow-wrap: break-word; 
+            word-wrap: break-word;     
+            word-break: break-word;    
+            overflow: hidden;
+            text-shadow: 2px 2px #ffffff ;
         }
 
         .text-wrapper .text-display{
             height: 180px;
-            width: 180px;
+            width: 220px;
+            font-family: 'Mistrully', sans-serif;
             position: absolute;
             text-align: center;
             font-size: large;
-            left: 145px;
-            top: 283px;
+            left: 93px;
+            top: 270px;
             border-radius: 2%;
-            color: #6e6e6e;
-            background-color: white;  
+            color: #af753e;
+            background-color: transparent;  
             resize: none;
             border: 2px solid white;
             line-height: 1.5;
@@ -73,7 +82,6 @@
             word-wrap: break-word;     
             word-break: break-word;    
             overflow: hidden;
-            z-index: 2;
         }
 
         .foto{
@@ -87,35 +95,38 @@
         }
 
         #foto1 {
-            left: 0px;
-            top: 85px;
-            width: 338px;
-            height: 240px;
-            z-index: 1;
+            left: 200px;
+            top: 15px;
+            width: 120px;
+            height: 120px;
+            border: 6px solid #d3a274;
         }
 
         #foto2 {
-            left: 25px;
-            top: 215px;
-            width: 100px;
-            height: 100px;
-            border: 4px solid #ffffff;
+            left: 105px;
+            top: 82px;
+            width: 120px;
+            height: 120px;
+            border: 3px solid #d3a274;
+            z-index: 3;
         }
 
         #foto3 {
-            left: 25px;
-            top: 315px;
-            width: 100px;
-            height: 100px;
-            border: 4px solid #ffffff;
+            left: 5px;
+            top: 248px;
+            width: 110px;
+            height: 110px;
+            border: 3px solid #d3a274;
+            transform: rotate(-5deg);
         }
 
         #foto4 {
-            left: 25px;
-            top: 415px;
-            width: 100px;
-            height: 100px;
-            border: 4px solid #ffffff;
+            left: 15px;
+            top: 355px;
+            width: 110px;
+            height: 110px;
+            border: 3px solid #d3a274;
+            transform: rotate(-5deg);
         }
 
         .foto img {
@@ -123,18 +134,13 @@
             height: 100%;
             object-fit: cover;
         }
-
-        .decor{
-            background: transparent;
-            z-index: 4;
-        }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
         <div class="title">
-            <div class="title-display" id="displayTitle">Title here</div>
+            <div class="title-display" id="displayTitle"></div>
         </div>
         <div class="text-wrapper">
             <div class="text-display" id="displayText">Place Your Message here</div>
@@ -150,9 +156,6 @@
         </div>
         <div class="foto" id="foto4">
             <img src="crot.png" alt="foto4">
-        </div>
-        <div class="decor" id="foto5">
-            <img src="decor_fai.png" alt="foto4">
         </div>
     </div>
 

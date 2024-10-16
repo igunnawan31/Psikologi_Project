@@ -12,10 +12,10 @@ class EmailController extends Controller
 {
     public function showForm()
     {
-        return view('contact');
+        return view('form');
     }
 
-    public function sendEmail(Request $request)
+    public function storeEmail(Request $request)
     {
         // Validate input
         $request->validate([
@@ -44,8 +44,8 @@ class EmailController extends Controller
         $message = new Google_Service_Gmail_Message();
         $rawMessage = "From: {$request->email}\r\n";
         $rawMessage .= "To: {$request->targetEmail}\r\n";
-        $rawMessage .= "Subject: Message from {$request->name}\r\n\r\n";
-        $rawMessage .= $request->message;
+        $rawMessage .= "Subject: {$request->subject}\r\n\r\n";
+        $rawMessage .= $request->bodyEmail;
         $message->setRaw(base64_encode($rawMessage));
 
         // Send the email

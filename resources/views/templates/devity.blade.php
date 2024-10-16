@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
-    <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
     <style>
         body {
             display: flex;
@@ -18,21 +17,20 @@
         }
 
         .wrapper {
-            background-image: url("assets/Arim.svg");
+            background-image: url("/assets/Devity.svg");
             height: 602px;
             width: 338px;
             z-index: 1;
             display: flex;
             justify-content: center;
             position: relative;
-            overflow: hidden;
         }
 
         .title {
             position: absolute;
-            top: 160px; /* Adjust this based on where you want the text to appear */
-            left: 115px;
-            width: 240px;
+            top: -30px; /* Adjust this based on where you want the text to appear */
+            left: 105px;
+            width: 250px;
             height: 200px;
             display: flex;
             justify-content: center;
@@ -43,30 +41,22 @@
 
         .title-display {
             position: relative;
-            font-family: 'Baloo', sans-serif;
-            font-size: 35px;
-            text-transform: none; /* Match the style in the image */
-            letter-spacing: 1px;
-            color: #af753e;
-            text-align: center;
-            line-height: 1;
-            font-weight: bold;
-            overflow-wrap: break-word; 
-            word-wrap: break-word;     
-            word-break: break-word;    
-            overflow: hidden;
-            text-shadow: 2px 2px #ffffff ;
+            font-family: 'Bree Serif', sans-serif;
+            font-size: 25px;
+            text-transform:none; /* Match the style in the image */
+            letter-spacing: 2px;
+            color: #800329;
+            font-weight: 800;
         }
 
         .text-wrapper .text-display{
-            height: 180px;
+            height: 80px;
             width: 220px;
-            font-family: 'Mistrully', sans-serif;
             position: absolute;
             text-align: center;
             font-size: large;
-            left: 93px;
-            top: 270px;
+            left: 115px;
+            top: 83px;
             border-radius: 2%;
             color: #af753e;
             background-color: transparent;  
@@ -95,38 +85,39 @@
         }
 
         #foto1 {
-            left: 200px;
-            top: 15px;
-            width: 120px;
-            height: 120px;
-            border: 6px solid #d3a274;
+            left: 205px;
+            top: 185px;
+            width: 130px;
+            height: 140px;
+            border: 6px solid #d4c4e9;
         }
 
         #foto2 {
-            left: 105px;
-            top: 82px;
-            width: 120px;
-            height: 120px;
-            border: 3px solid #d3a274;
-            z-index: 3;
+            left: 205px;
+            top: 332px;
+            width: 130px;
+            height: 140px;
+            border: 6px solid #d4c4e9;
         }
 
         #foto3 {
-            left: 5px;
-            top: 248px;
-            width: 110px;
-            height: 110px;
-            border: 3px solid #d3a274;
-            transform: rotate(-5deg);
+            left: 50px;
+            top: 215px;
+            width: 140px;
+            height: 208px;
+            border: 3px solid #d4c4e9;
+            border-radius: 50%;
+            overflow: hidden;
         }
 
         #foto4 {
-            left: 15px;
-            top: 355px;
-            width: 110px;
-            height: 110px;
-            border: 3px solid #d3a274;
-            transform: rotate(-5deg);
+            left: 55px;
+            top: 480px;
+            width: 170px;
+            height: 115px;
+            border: 3px solid #d4c4e9;
+            border-radius: 7px;
+            overflow: hidden;
         }
 
         .foto img {

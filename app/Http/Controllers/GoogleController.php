@@ -25,11 +25,14 @@ class GoogleController extends Controller
                     'google_token' => $user->token,
                     'google_refresh_token' => $user->refreshToken ?? $finduser->google_refresh_token, // Refresh token may be null in some cases
                 ]);
-                return redirect()->route('contact');
+                // return redirect()->route('contact');
+                // dd($user->avatar);
+                return redirect()->route(route: 'home');
             } else {
                 $newUser = User::create([
                     'name' => $user->name,
                     'email' => $user->email,
+                    'avatar' => $user->avatar,
                     'google_id' => $user->id,
                     'google_token' => $user->token, // Save access token
                     'google_refresh_token' => $user->refreshToken ?? null, // Save refresh token
@@ -38,7 +41,9 @@ class GoogleController extends Controller
                 // dd($newUser);
                 Auth::login($newUser);
 
-                return redirect()->route('contact');
+                // return redirect()->route('contact');
+                // dd($user->avatar);
+                return redirect()->route('home');
             }
 
         } catch (Exception $e) {
