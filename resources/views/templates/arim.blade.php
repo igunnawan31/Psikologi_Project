@@ -151,10 +151,8 @@
         <div class="foto" id="foto2">
             <img src="crot.png" alt="foto2">
         </div>
-        </div>
         <div class="foto" id="foto3" >
             <img src="crot.png" alt="foto3">
-        </div>
         </div>
         <div class="foto" id="foto4">
             <img src="crot.png" alt="foto4">
