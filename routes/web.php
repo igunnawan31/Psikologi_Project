@@ -1,12 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\PesananController;
-use Illuminate\Support\Facades\File;
+use App\Http\Controllers\TemplateController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -41,6 +42,12 @@ Route::get('/templates/{name}', function ($name) {
     }
     abort(404);  // Jika file tidak ditemukan, return 404
 });
+
+// Route to display all templates (our products)
+Route::get('/ourproduct', [TemplateController::class, 'index']);
+
+// Route to display a specific template's details
+Route::get('/ourproduct/{namatemplate}', [TemplateController::class, 'show']);
 
 Route::get('/amara', function() {
     return view('templates.amara');

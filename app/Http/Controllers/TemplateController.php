@@ -13,7 +13,8 @@ class TemplateController extends Controller
      */
     public function index()
     {
-        //
+        $templates = Template::all(); // Fetch all templates
+        return view('ourproduct', compact('templates')); // Pass templates to the view
     }
 
     /**
@@ -35,9 +36,10 @@ class TemplateController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Template $template)
+    public function show($namatemplate)
     {
-        //
+        $template = Template::where('namatemplate', $namatemplate)->firstOrFail(); // Fetch by 'namatemplate'
+        return view('product', compact('template')); // Pass the template to the product view
     }
 
     /**

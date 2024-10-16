@@ -19,7 +19,8 @@ return new class extends Migration
             $table->time('waktukirim');
             $table->string('judul');
             $table->string('pesan');
-            $table->string('url');
+            $table->string('templateurl');
+            $table->string('');
             // $table->stri
             $table->timestamps();
         });

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('namatemplate');
             $table->string('pathtemplate');
+            $table->string('deskripsitemplate');
             $table->timestamps();
         });
     }
