@@ -7,240 +7,138 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .wrapper {
-            background-image: url("/assets/amara.svg");
-            height: 602px;
-            width: 338px;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .title {
-            position: absolute;
-            top: 65px; /* Adjust this based on where you want the text to appear */
-            left: 25px;
-            width: 200px;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            pointer-events: none; /* Ensure it doesn't block interaction */
-            z-index: 2;
-        }
-
-        .title-display {
-            position: relative;
-            font-family: 'Baloo', sans-serif;
-            font-size: 30px;
-            text-transform: uppercase; /* Match the style in the image */
-            letter-spacing: 2px;
-            color: rgb(190, 105, 24);
-        }
-
-        .title-display span {
-            position: absolute;
-            transform-origin: 100px 100px; /* Origin at the center of the circle */
-        }
-
-
-        .text-wrapper .text-display{
-            height: 200px;
-            width: 200px;
-            position: absolute;
-            text-align: center;
-            font-size: large;
-            left: 33px;
-            top: 93px;
-            border-radius: 50%;
-            color: aliceblue;
-            background-color: transparent;  
-            resize: none;
-            border: 2px solid white;
-            line-height: 1.5;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            overflow-wrap: break-word; 
-            word-wrap: break-word;     
-            word-break: break-word;    
-            overflow: hidden;
-        }
-
-        .foto{
-            position: absolute;
-            z-index: 2;
-            object-fit: fill;
-            background-color: white ;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #foto1 {
-            left: 170px;
-            top: 225px;
-            width: 160px;
-            height: 165px;
-            border: 8px solid rgb(247, 200, 114);
-        }
-
-        #foto2 {
-            left: 170px;
-            top: 382px;
-            width: 160px;
-            height: 165px;
-            border: 8px solid rgb(247, 200, 114);
-        }
-
-        #foto3 {
-            left: 20px;
-            top: 290px;
-            width: 140px;
-            height: 98px;
-            border: 3px solid rgb(247, 200, 114);
-        }
-
-        #foto4 {
-            left: 20px;
-            top: 390px;
-            width: 140px;
-            height: 98px;
-            border: 3px solid rgb(247, 200, 114);
-        }
-
-        .foto img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
 </head>
 <body>
-    
-    <div class="wrapper">
-        <div class="title">
-            <div class="title-display" id="displayTitle"></div>
-        </div>
-        <div class="text-wrapper">
-            <div class="text-display" id="displayText">Place Your Message here</div>
-        </div>
-        <div class="foto" id="foto1">
-            <img src="crot.png" alt="foto1">
-        </div>
-        <div class="foto" id="foto2">
-            <img src="crot.png" alt="foto2">
-        </div>
-        <div class="foto" id="foto3" >
-            <img src="crot.png" alt="foto3">
-        </div>
-        <div class="foto" id="foto4">
-            <img src="crot.png" alt="foto4">
-        </div>
-    </div>
+    <x-header></x-header>
+    <section class="flex justify-center items-center py-20 m-0">
+        <div class="relative flex justify-center h-[602px] w-[338px] z-10 bg-no-repeat bg-cover" style="background-image: url('{{ asset('assets/amara.svg') }}');">
+            <div class="absolute top-[65px] left-[25px] w-[200px] h-[200px] flex justify-center items-center z-20 pointer-events-none">
+                <div class="relative text-[30px] font-baloo uppercase tracking-widest text-[rgb(190,105,24)]" id="displayTitle"></div>
+            </div>
+            <div class="absolute top-[93px] left-[33px] w-[200px] h-[200px] flex justify-center items-center rounded-full border-2 border-white text-center text-lg text-aliceblue bg-transparent overflow-hidden break-words leading-tight p-4" id="displayText">
+                Place Your Message here
+            </div>
 
-    <div class="upload m-3">
-        <div>
-            <label for="upload1">Upload new image </label>
-            <input type="file" id="upload1" accept="image/*">
+            <div id="foto1" class="absolute left-[170px] top-[225px] w-[160px] h-[165px] flex justify-center items-center border-8 border-[rgb(247,200,114)] bg-white z-20">
+                <img src="{{ asset('assets/gambar.png') }}" alt="foto1" class="object-cover w-full h-full">
+            </div>
+
+            <div id="foto2" class="absolute left-[170px] top-[382px] w-[160px] h-[165px] flex justify-center items-center border-8 border-[rgb(247,200,114)] bg-white z-20">
+                <img src="{{ asset('assets/gambar.png') }}" alt="foto2" class="object-cover w-full h-full">
+            </div>
+
+            <div id="foto3" class="absolute left-[20px] top-[290px] w-[140px] h-[98px] flex justify-center items-center border-3 border-[rgb(247,200,114)] bg-white z-20">
+                <img src="{{ asset('assets/gambar.png') }}" alt="foto3" class="object-cover w-full h-full">
+            </div>
+
+            <div id="foto4" class="absolute left-[20px] top-[390px] w-[140px] h-[98px] flex justify-center items-center border-3 border-[rgb(247,200,114)] bg-white z-20">
+                <img src="{{ asset('assets/gambar.png') }}" alt="foto4" class="object-cover w-full h-full">
+            </div>
         </div>
-        <div>
-            <label for="upload2">Upload new image </label>
-            <input type="file" id="upload2" accept="image/*">
+
+        <div class="upload bg-white p-6 rounded-lg shadow-lg w-96 h-[602px] border-2 border-black ml-10">
+            <h2 class="text-xl font-bold mb-4 text-gray-700">Upload Your Text for Amara</h2>
+
+            <div class="mb-4">
+                <label for="upload1" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
+                <input type="file" id="upload1" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+            </div>
+
+            <div class="mb-4">
+                <label for="upload2" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
+                <input type="file" id="upload2" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+            </div>
+
+            <div class="mb-4">
+                <label for="upload3" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
+                <input type="file" id="upload3" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+            </div>
+
+            <div class="mb-4">
+                <label for="upload4" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
+                <input type="file" id="upload4" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+            </div>
+
+            <div class="mb-4">
+                <label for="upload5" class="block text-sm font-medium text-gray-700 mb-2">Message:</label>
+                <input type="text" id="upload5" placeholder="Place your message here" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateText()">
+            </div>
+
+            <div class="">
+                <label for="upload6" class="block text-sm font-medium text-gray-700 mb-2">Title:</label>
+                <input type="text" id="upload6" placeholder="Place your title here" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateTitle()">
+            </div>
         </div>
-        <div>
-            <label for="upload3">Upload new image </label>
-            <input type="file" id="upload3" accept="image/*">
+    </section>
+
+    <section id="button" class="pb-10">
+        <div class="flex justify-center items-center">
+            <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                <a href="/createyourown/pickyourtemplates">
+                    <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
+                        Back
+                    </h2>
+                </a>
+            </div>
+            <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
+                <a id="templatePath" href="/createyourown/pickyourtemplates/form">
+                    <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
+                        Selanjutnya
+                    </h2>
+                </a>
+            </div>
         </div>
-        <div>
-            <label for="upload4">Upload new image </label>
-            <input type="file" id="upload4" accept="image/*">
-        </div>
-        <div>
-            <label for="upload5">Message: </label>
-            <input type="text" id="upload5" placeholder="Place your message here" oninput="updateText()">
-        </div>
-        <div>
-            <label for="upload6">Title: </label>
-            <input type="text" id="upload6" placeholder="Place your title here" oninput="updateTitle()">
-        </div>
-    </div>
-    
+    </section>
+    <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.bundle.js"></script>
+
     <script>
         function updateText() {
-            // Get the input value
             const inputText = document.getElementById("upload5").value;
-    
-            // Set the display div's content to the input value
             document.getElementById("displayText").innerText = inputText;
         }
-    
+
         function updateTitle() {
             const titleText = document.getElementById("upload6").value;
             const titleDisplay = document.getElementById("displayTitle");
-    
-            // Clear the existing content
             titleDisplay.innerHTML = '';
-    
-            const radius = 100;  // Radius of the circle
-            const angleStep = 180 / (titleText.length - 1);  // Distribute only across the top half
-    
+            const radius = 100;
+            const angleStep = 180 / (titleText.length - 1);
             titleText.split('').forEach((char, index) => {
                 const span = document.createElement('span');
                 span.innerText = char;
-    
-                // Calculate the angle for each letter (we're rotating from the center, outward)
-                const angle = -180 + (index * angleStep); // Start at -90 (top center), curve to right
-                
-                // First rotate by angle, translate outward from the center, then rotate back to make the letter upright
-                span.style.position = 'absolute';  // Ensure the letters position themselves on the circle
+                const angle = -180 + (index * angleStep);
+                span.style.position = 'absolute';
+                span.style.fontWeight = 'bold';
+                span.style.textShadow = '2px 2px #000000'
                 span.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(${angle * -1}deg)`;
-    
-                // Append the letter span to the title display container
                 titleDisplay.appendChild(span);
             });
         }
-    
-        // Function to handle image upload and replace the landscape
+
         function uploadImage(input, imgElement) {
             const file = input.files[0];
             const reader = new FileReader();
-    
-            reader.onload = function(e) {
-                imgElement.src = e.target.result;  // Set the new image source
+            reader.onload = function (e) {
+                imgElement.src = e.target.result;
             };
-    
             if (file) {
-                reader.readAsDataURL(file);  // Convert file to a Data URL
+                reader.readAsDataURL(file);
             }
         }
-    
-        // Event listeners for each upload input
-        document.getElementById('upload1').addEventListener('change', function() {
+
+        document.getElementById('upload1').addEventListener('change', function () {
             uploadImage(this, document.querySelector('#foto1 img'));
         });
-    
-        document.getElementById('upload2').addEventListener('change', function() {
+
+        document.getElementById('upload2').addEventListener('change', function () {
             uploadImage(this, document.querySelector('#foto2 img'));
         });
-    
-        document.getElementById('upload3').addEventListener('change', function() {
+
+        document.getElementById('upload3').addEventListener('change', function () {
             uploadImage(this, document.querySelector('#foto3 img'));
         });
-    
-        document.getElementById('upload4').addEventListener('change', function() {
+
+        document.getElementById('upload4').addEventListener('change', function () {
             uploadImage(this, document.querySelector('#foto4 img'));
         });
     </script>

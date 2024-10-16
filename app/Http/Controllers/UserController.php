@@ -37,10 +37,10 @@ class UserController extends Controller
         return view('pickyourtemplates');
     }
 
-    public function showpreview() : View
-    {
-        return view('preview');
-    }
+    // public function showpreview() : View
+    // {
+    //     return view('preview');
+    // }
 
     public function showform() : View
     {

@@ -19,7 +19,7 @@
     </section>
 
     <!-- Add method="POST" and action to the form -->
-    <form class="max-w-2xl mx-auto" method="POST" action="{{ route('pesanan.store') }}">
+    <form class="max-w-2xl mx-auto" method="POST">
         {{-- @csrf <!-- This is necessary for security in Laravel --> --}}
 
         <!-- Nama Pemesan -->
@@ -59,12 +59,27 @@
         </div>
 
         <!-- Submit Button -->
-        <div class="flex justify-center items-center">
-            <button type="submit" class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg text-white font-bold text-xl">
-                Submit
-            </button>
-        </div>
+        <section id="button" class="pb-10">
+            <div class="flex justify-center items-center">
+                <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    <a href="{{ url()->previous() }}">
+                        <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
+                            Back
+                        </h2>
+                    </a>
+                </div>
+                <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
+                    <a id="templatePath" href="/createyourown/pickyourtemplates/form/payment">
+                        <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
+                            Selanjutnya
+                        </h2>
+                    </a>
+                </div>
+            </div>
+        </section>
     </form>
+
+    <script src="{{ asset('js/app.js') }}"></script>
 
     {{-- <div class="flex justify-center items-center">
         <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
