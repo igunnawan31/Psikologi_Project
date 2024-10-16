@@ -14,7 +14,7 @@ class Pesanan extends Model
         'emailpenerima',
         'tanggalkirim',
         'waktukirim',
-        'judul',
-        'pesan'
+        'subject',
+        'bodyEmail'
     ];
 }
