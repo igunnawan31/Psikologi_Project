@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -17,7 +17,7 @@
         }
 
         .wrapper {
-            background-image: url("assets/Devity.svg");
+            background-image: url("/assets/fai.png");
             height: 602px;
             width: 338px;
             z-index: 1;
@@ -28,38 +28,39 @@
 
         .title {
             position: absolute;
-            top: -30px; /* Adjust this based on where you want the text to appear */
-            left: 105px;
+            top: 60px; /* Adjust this based on where you want the text to appear */
+            left: 20px;
             width: 250px;
             height: 200px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            text-align: left;
             pointer-events: none; /* Ensure it doesn't block interaction */
             z-index: 2;
+            transform: rotate(-4deg);
         }
 
         .title-display {
             position: relative;
-            font-family: 'Bree Serif', sans-serif;
+            font-family: 'Mistrully', sans-serif;
             font-size: 25px;
             text-transform:none; /* Match the style in the image */
             letter-spacing: 2px;
-            color: #800329;
+            color: #9d4b3b;
             font-weight: 800;
         }
 
         .text-wrapper .text-display{
-            height: 80px;
-            width: 220px;
+            height: 180px;
+            width: 180px;
             position: absolute;
             text-align: center;
             font-size: large;
-            left: 115px;
-            top: 83px;
+            left: 145px;
+            top: 283px;
             border-radius: 2%;
-            color: #af753e;
-            background-color: transparent;  
+            color: #6e6e6e;
+            background-color: white;  
             resize: none;
             border: 2px solid white;
             line-height: 1.5;
@@ -72,6 +73,7 @@
             word-wrap: break-word;     
             word-break: break-word;    
             overflow: hidden;
+            z-index: 2;
         }
 
         .foto{
@@ -85,39 +87,35 @@
         }
 
         #foto1 {
-            left: 205px;
-            top: 185px;
-            width: 130px;
-            height: 140px;
-            border: 6px solid #d4c4e9;
+            left: 0px;
+            top: 85px;
+            width: 338px;
+            height: 240px;
+            z-index: 1;
         }
 
         #foto2 {
-            left: 205px;
-            top: 332px;
-            width: 130px;
-            height: 140px;
-            border: 6px solid #d4c4e9;
+            left: 25px;
+            top: 215px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
         }
 
         #foto3 {
-            left: 50px;
-            top: 215px;
-            width: 140px;
-            height: 208px;
-            border: 3px solid #d4c4e9;
-            border-radius: 50%;
-            overflow: hidden;
+            left: 25px;
+            top: 315px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
         }
 
         #foto4 {
-            left: 55px;
-            top: 480px;
-            width: 170px;
-            height: 115px;
-            border: 3px solid #d4c4e9;
-            border-radius: 7px;
-            overflow: hidden;
+            left: 25px;
+            top: 415px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
         }
 
         .foto img {
@@ -125,13 +123,18 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .decor{
+            background: transparent;
+            z-index: 4;
+        }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
         <div class="title">
-            <div class="title-display" id="displayTitle"></div>
+            <div class="title-display" id="displayTitle">Title here</div>
         </div>
         <div class="text-wrapper">
             <div class="text-display" id="displayText">Place Your Message here</div>
@@ -142,13 +145,14 @@
         <div class="foto" id="foto2">
             <img src="crot.png" alt="foto2">
         </div>
-        </div>
         <div class="foto" id="foto3" >
             <img src="crot.png" alt="foto3">
         </div>
-        </div>
         <div class="foto" id="foto4">
             <img src="crot.png" alt="foto4">
+        </div>
+        <div class="decor" id="foto5">
+            <img src="decor_fai.png" alt="foto4">
         </div>
     </div>
 
