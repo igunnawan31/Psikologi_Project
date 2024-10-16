@@ -24,37 +24,37 @@
 
         <!-- Nama Pemesan -->
         <div class="mb-5">
-            <label for="namapemesan" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Nama</label>
-            <input type="text" id="namapemesan" name="namapemesan" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
+            <label for="namaPemesan" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Nama</label>
+            <input type="text" id="namaPemesan" name="namaPemesan" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
         </div>
 
         <!-- Email Penerima -->
         <div class="mb-5">
-            <label for="emailpenerima" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Email Penerima</label>
-            <input type="email" id="emailpenerima" name="emailpenerima" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
+            <label for="targetEmail" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Email Penerima</label>
+            <input type="email" id="targetEmail" name="targetEmail" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
         </div>
 
         <!-- Tanggal Kirim -->
         <div class="mb-5">
-            <label for="tanggalkirim" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Tanggal Kirim</label>
-            <input type="date" id="tanggalkirim" name="tanggalkirim" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
+            <label for="tanggalKirim" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Tanggal Kirim</label>
+            <input type="date" id="tanggalKirim" name="tanggalKirim" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
         </div>
 
         <!-- Waktu Kirim -->
         <div class="mb-5">
-            <label for="waktukirim" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Waktu Kirim</label>
-            <input type="time" id="waktukirim" name="waktukirim" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
+            <label for="waktuKirim" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Waktu Kirim</label>
+            <input type="time" id="waktuKirim" name="waktuKirim" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
         </div>
 
         <!-- Subject -->
         <div class="mb-5">
-            <label for="Subject" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Subject</label>
-            <input type="text" id="Subject" name="Subject" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
+            <label for="subject" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Subject Email</label>
+            <input type="text" id="subject" name="subject" class="block w-full p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700">
         </div>
 
         <!-- Body Email -->
         <div class="mb-5">
-            <label for="bodyEmail" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">bodyEmail</label>
+            <label for="bodyEmail" class="block mb-2 text-md font-medium text-pink-500 dark:text-white">Body Email</label>
             <textarea id="bodyEmail" name="bodyEmail" class="block w-full h-60 p-4 text-pink-500 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-pink-700 focus:border-pink-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-700 dark:focus:border-pink-700"></textarea>
         </div>
 

@@ -23,19 +23,19 @@
             <div class="flex items-center justify-center space-x-5">
                 <!-- Image 1 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Devity.png" src="/assets/Devity.png" alt="contoh 1">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Devity.png" data-template-src="{{url('/templates/devity')}}" src="/assets/Devity.png" alt="contoh 1">
                 </div>
                 <!-- Image 2 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/amara.png" src="/assets/amara.png" alt="contoh 2">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/amara.png" data-template-src="{{url('/templates/amara')}}" src="/assets/amara.png" alt="contoh 2">
                 </div>
                 <!-- Image 3 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Arim.png" src="/assets/Arim.png" alt="contoh 3">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/Arim.png" data-template-src="{{url('/templates/arim')}}" src="/assets/Arim.png" alt="contoh 3">
                 </div>
                 <!-- Image 4 -->
                 <div class="px-2 py-2 bg-transparent hover:bg-slate-50 hover:bg-opacity-40 border-2 border-pink-500 transition duration-300 ease-in-out">
-                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/fai.png" src="/assets/fai.png" alt="contoh 4">
+                    <img class="template-image object-cover h-40 w-40 hover:scale-110 transition duration-300 ease-in-out cursor-pointer" data-image-src="/assets/fai.png" data-template-src="{{url('/templates/fai')}}" src="/assets/fai.png" alt="contoh 4">
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                 </a>
             </div>
             <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
-                <a href="/createyourown/pickyourtemplates/form">
+                <a id="templatePath" href="{{route('amara')}}">
                     <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
                         Selanjutnya
                     </h2>

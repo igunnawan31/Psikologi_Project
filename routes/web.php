@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\PesananController;
+use Illuminate\Support\Facades\File;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -27,19 +28,30 @@ Route::get('auth/google', [GoogleController::class, 'googlepage']);
 Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
 
 Route::post('/sendEmail', [EmailController::class,'sendEmail']) -> name('send.email');
-Route::get('/generate-pdf', [PdfController::class, 'generatePDF']);
+Route::get('/generatePdf', [PdfController::class, 'generatePDF']) -> name('generate.pdf');
 Route::get('/contact', function() {
     return view('contact');
 })->name('contact');
+
+
+Route::get('/templates/{name}', function ($name) {
+    // Periksa apakah view ada di folder templates
+    if (view()->exists('templates.' . $name)) {
+        // Render view dari folder templates
+        return view('templates.' . $name);
+    }
+    abort(404);  // Jika file tidak ditemukan, return 404
+});
+
 Route::get('/amara', function() {
-    return view('amara');
+    return view('templates.amara');
 })->name('amara');
 Route::get('/arim', function() {
-    return view('arim');
+    return view('templates.arim');
 })->name('arim');
 Route::get('/fai', function() {
-    return view('fai');
+    return view('templates.fai');
 })->name('fai');
 Route::get('/devity', function() {
-    return view('devity');
+    return view('templates.devity');
 })->name('devity');
