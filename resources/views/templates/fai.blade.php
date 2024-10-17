@@ -6,216 +6,125 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
     <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .wrapper {
-            background-image: url("/assets/fai.png");
-            height: 602px;
-            width: 338px;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .title {
-            position: absolute;
-            top: 60px; /* Adjust this based on where you want the text to appear */
-            left: 20px;
-            width: 250px;
-            height: 200px;
-            display: flex;
-            justify-content: left;
-            text-align: left;
-            pointer-events: none; /* Ensure it doesn't block interaction */
-            z-index: 2;
-            transform: rotate(-4deg);
-        }
-
-        .title-display {
-            position: relative;
-            font-family: 'Mistrully', sans-serif;
-            font-size: 25px;
-            text-transform:none; /* Match the style in the image */
-            letter-spacing: 2px;
-            color: #9d4b3b;
-            font-weight: 800;
-        }
-
-        .text-wrapper .text-display{
-            height: 180px;
-            width: 180px;
-            position: absolute;
-            text-align: center;
-            font-size: large;
-            left: 145px;
-            top: 283px;
-            border-radius: 2%;
-            color: #6e6e6e;
-            background-color: white;  
-            resize: none;
-            border: 2px solid white;
-            line-height: 1.5;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            overflow-wrap: break-word; 
-            word-wrap: break-word;     
-            word-break: break-word;    
-            overflow: hidden;
-            z-index: 2;
-        }
-
-        .foto{
-            position: absolute;
-            z-index: 2;
-            object-fit: fill;
-            background-color: white ;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #foto1 {
-            left: 0px;
-            top: 85px;
-            width: 338px;
-            height: 240px;
-            z-index: 1;
-        }
-
-        #foto2 {
-            left: 25px;
-            top: 215px;
-            width: 100px;
-            height: 100px;
-            border: 4px solid #ffffff;
-        }
-
-        #foto3 {
-            left: 25px;
-            top: 315px;
-            width: 100px;
-            height: 100px;
-            border: 4px solid #ffffff;
-        }
-
-        #foto4 {
-            left: 25px;
-            top: 415px;
-            width: 100px;
-            height: 100px;
-            border: 4px solid #ffffff;
-        }
-
-        .foto img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .decor{
-            background: transparent;
-            z-index: 4;
-        }
-    </style>
 </head>
 <body>
+    <x-header></x-header>
+    <section class="flex justify-center items-center py-20 m-0">
+        <div class="relative h-[602px] w-[338px] bg-cover bg-no-repeat z-1" style="background-image: url('/assets/fai_bg.png');">
+            <div class="absolute flex justify-start items-center top-[-20px] left-[20px] w-[250px] h-[200px] pointer-events-none z-index-20">
+                <div id="displayTitle" class="relative font-[Mistrully] text-[25px] tracking-wider text-[#9d4b3b] font-extrabold -rotate-6 transform z-20">Judul</div>
+            </div>
+            <div class="absolute left-[145px] top-[283px] w-[180px] h-[180px] bg-white text-[#6e6e6e] text-lg border-2 border-white rounded-md flex justify-center items-center text-center z-20 p-2 break-words overflow-hidden">
+                <div id="displayText">Place Your Message here</div>
+            </div>
+    
+            <div id="foto1" class="absolute left-0 top-[85px] w-[338px] h-[240px] z-10">
+                <img src="/assets/gambar.png" alt="foto1" class="object-cover w-full h-full">
+            </div>
+    
+            <div id="foto2" class="absolute left-[25px] top-[215px] w-[100px] h-[100px] z-20 border-4 border-white">
+                <img src="/assets/gambar.png"  alt="foto2" class="object-cover w-full h-full">
+            </div>
+    
+            <div id="foto3" class="absolute left-[25px] top-[315px] w-[100px] h-[100px] z-20 border-4 border-white">
+                <img src="/assets/gambar.png"  alt="foto3" class="object-cover w-full h-full">
+            </div>
+    
+            <div id="foto4" class="absolute left-[25px] top-[415px] w-[100px] h-[100px] z-20 border-4 border-white">
+                <img src="/assets/gambar.png"  alt="foto4" class="object-cover w-full h-full">
+            </div>
+    
+            <div class="absolute z-30 bg-transparent">
+                <img src="/assets/decor_fai.png" alt="decor" class="w-full h-full">
+            </div>
+        </div>
 
-    <div class="wrapper">
-        <div class="title">
-            <div class="title-display" id="displayTitle">Title here</div>
-        </div>
-        <div class="text-wrapper">
-            <div class="text-display" id="displayText">Place Your Message here</div>
-        </div>
-        <div class="foto" id="foto1">
-            <img src="crot.png" alt="foto1">
-        </div>
-        <div class="foto" id="foto2">
-            <img src="crot.png" alt="foto2">
-        </div>
-        <div class="foto" id="foto3" >
-            <img src="crot.png" alt="foto3">
-        </div>
-        <div class="foto" id="foto4">
-            <img src="crot.png" alt="foto4">
-        </div>
-        <div class="decor" id="foto5">
-            <img src="decor_fai.png" alt="foto4">
-        </div>
-    </div>
+        <div class="upload bg-white p-3 rounded-lg shadow-lg w-96 h-[602px] border-2 border-pink-500 ml-10">
+            <h2 class="text-xl font-bold mb-4 text-pink-500">Upload Your Text for Fai</h2>
 
-    <div class="upload m-3">
-        <div>
-            <label for="upload1">Upload new image </label>
-            <input type="file" id="upload1" accept="image/*">
+            <div class="mb-4">
+                <label for="upload1" class="block text-sm font-medium text-pink-500 mb-2">Upload new image</label>
+                <input type="file" id="upload1" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload1Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
+            </div>
+            
+            <div class="mb-4">
+                <label for="upload2" class="block text-sm font-medium text-pink-500 mb-2">Upload new image</label>
+                <input type="file" id="upload2" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload2Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
+            </div>
+            
+            <div class="mb-4">
+                <label for="upload3" class="block text-sm font-medium text-pink-500 mb-2">Upload new image</label>
+                <input type="file" id="upload3" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload3Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
+            </div>
+            
+            <div class="mb-4">
+                <label for="upload4" class="block text-sm font-medium text-pink-500 mb-2">Upload new image</label>
+                <input type="file" id="upload4" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload4Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
+            </div>
+            
+            <div class="mb-4">
+                <label for="upload5" class="block text-sm font-medium text-pink-500 mb-2">Message:</label>
+                <input type="text" id="upload5" placeholder="Place your message here" maxlength="100" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateText(); validateInputs();">
+                <span id="messageError" class="text-red-500 text-sm hidden">Please enter a message (max 100 characters).</span>
+                <span id="charCount" class="text-gray-500 text-sm">0/100</span>
+            </div>
+            
+            <div class="mb-4">
+                <label for="upload6" class="block text-sm font-medium text-pink-500 mb-2">Title:</label>
+                <input type="text" id="upload6" placeholder="Place your title here" maxlength="20" class="py-2 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateTitle(); validateInputs();">
+                <span id="titleError" class="text-red-500 text-sm hidden">Please enter a title (max 20 characters).</span>
+            </div>
         </div>
-        <div>
-            <label for="upload2">Upload new image </label>
-            <input type="file" id="upload2" accept="image/*">
+    </section>
+    <section id="button" class="pb-10">
+        <div class="flex justify-center items-center">
+            <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                <a href="/createyourown/pickyourtemplates">
+                    <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
+                        Back
+                    </h2>
+                </a>
+            </div>
+            <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
+                <a id="templatePath" href="/createyourown/pickyourtemplates/form">
+                    <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
+                        Selanjutnya
+                    </h2>
+                </a>
+            </div>
         </div>
-        <div>
-            <label for="upload3">Upload new image </label>
-            <input type="file" id="upload3" accept="image/*">
-        </div>
-        <div>
-            <label for="upload4">Upload new image </label>
-            <input type="file" id="upload4" accept="image/*">
-        </div>
-        <div>
-            <label for="upload5">Message: </label>
-            <input type="text" id="upload5" placeholder="Place your message here" oninput="updateText()">
-        </div>
-        <div>
-            <label for="upload6">Title: </label>
-            <input type="text" id="upload6" placeholder="Place your title here" oninput="updateTitle()">
-        </div>
-    </div>
+    </section>
 
     <script>
         function updateText() {
-            // Get the input value
             const inputText = document.getElementById("upload5").value;
-
-            // Set the display div's content to the input value
             document.getElementById("displayText").innerText = inputText;
         }
 
         function updateTitle() {
-            // Get the input value
             const inputText = document.getElementById("upload6").value;
-
-            // Set the display div's content to the input value
             document.getElementById("displayTitle").innerText = inputText;
         }
 
-
-        // Function to handle image upload and replace the landscape
         function uploadImage(input, imgElement) {
             const file = input.files[0];
             const reader = new FileReader();
 
             reader.onload = function(e) {
-                imgElement.src = e.target.result;  // Set the new image source
+                imgElement.src = e.target.result;
             };
 
             if (file) {
-                reader.readAsDataURL(file);  // Convert file to a Data URL
+                reader.readAsDataURL(file);
             }
         }
 
-        // Event listeners for each upload input
         document.getElementById('upload1').addEventListener('change', function() {
             uploadImage(this, document.querySelector('#foto1 img'));
         });
@@ -231,6 +140,46 @@
         document.getElementById('upload4').addEventListener('change', function() {
             uploadImage(this, document.querySelector('#foto4 img'));
         });
+
+        function validateFile(input) {
+            const file = input.files[0];
+            const errorSpan = document.getElementById(input.id + "Error");
+            if (!file || !file.type.startsWith("image/")) {
+                errorSpan.classList.remove("hidden");
+            } else {
+                errorSpan.classList.add("hidden");
+            }
+        }
+
+        function validateInputs() {
+            const messageInput = document.getElementById("upload5");
+            const titleInput = document.getElementById("upload6");
+            const messageError = document.getElementById("messageError");
+            const titleError = document.getElementById("titleError");
+
+            const isMessageValid = messageInput.value.length > 0 && messageInput.value.length <= 100;
+            const isTitleValid = titleInput.value.length > 0;
+
+            messageError.classList.toggle("hidden", isMessageValid);
+            titleError.classList.toggle("hidden", isTitleValid);
+
+            return isMessageValid && isTitleValid;
+        }
+
+        function handleNext() {
+            const allFilesValid = [...document.querySelectorAll('input[type="file"]')].every(input => {
+                const file = input.files[0];
+                return file && file.type.startsWith("image/");
+            });
+
+            const inputsValid = validateInputs();
+
+            if (allFilesValid && inputsValid) {
+                window.location.href = '/createyourown/pickyourtemplates/form'; // Replace with your actual next page URL
+            } else {
+                alert("Please correct the errors before proceeding.");
+            }
+        }
     </script>
 </body>
 </html>

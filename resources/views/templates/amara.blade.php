@@ -13,9 +13,9 @@
     <section class="flex justify-center items-center py-20 m-0">
         <div class="relative flex justify-center h-[602px] w-[338px] z-10 bg-no-repeat bg-cover" style="background-image: url('{{ asset('assets/amara.svg') }}');">
             <div class="absolute top-[65px] left-[25px] w-[200px] h-[200px] flex justify-center items-center z-20 pointer-events-none">
-                <div class="relative text-[30px] font-baloo uppercase tracking-widest text-[rgb(190,105,24)]" id="displayTitle"></div>
+                <div class="relative text-[30px] font-[Baloo] uppercase tracking-widest text-[rgb(190,105,24)]" id="displayTitle"></div>
             </div>
-            <div class="absolute top-[93px] left-[33px] w-[200px] h-[200px] flex justify-center items-center rounded-full border-2 border-white text-center text-lg text-aliceblue bg-transparent overflow-hidden break-words leading-tight p-4" id="displayText">
+            <div class="absolute top-[93px] left-[33px] w-[200px] h-[200px] font-[Baloo] flex justify-center items-center rounded-full border-2 border-white text-center text-lg text-aliceblue bg-transparent overflow-hidden break-words leading-tight text-balance p-4" id="displayText">
                 Place Your Message here
             </div>
 
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div class="upload bg-white p-6 rounded-lg shadow-lg w-96 h-[602px] border-2 border-pink-500 ml-10">
+        <div class="upload bg-white p-2 rounded-lg shadow-lg w-96 h-[602px] border-2 border-pink-500 ml-10">
             <h2 class="text-xl font-bold mb-4 text-pink-500">Upload Your Text for Amara</h2>
 
             <div class="mb-4">
@@ -148,6 +148,37 @@
         document.getElementById('upload4').addEventListener('change', function () {
             uploadImage(this, document.querySelector('#foto4 img'));
         });
+
+        function validateInputs() {
+            const messageInput = document.getElementById("upload5");
+            const titleInput = document.getElementById("upload6");
+            const messageError = document.getElementById("messageError");
+            const titleError = document.getElementById("titleError");
+
+            const isMessageValid = messageInput.value.length > 0 && messageInput.value.length <= 100;
+            const isTitleValid = titleInput.value.length > 0;
+
+            messageError.classList.toggle("hidden", isMessageValid);
+            titleError.classList.toggle("hidden", isTitleValid);
+
+            return isMessageValid && isTitleValid;
+        }
+
+        function handleNext() {
+            const allFilesValid = [...document.querySelectorAll('input[type="file"]')].every(input => {
+                const file = input.files[0];
+                return file && file.type.startsWith("image/");
+            });
+
+            const inputsValid = validateInputs();
+
+            if (allFilesValid && inputsValid) {
+                window.location.href = '/createyourown/pickyourtemplates/form'; // Replace with your actual next page URL
+            } else {
+                alert("Please correct the errors before proceeding.");
+            }
+        }
     </script>
+
 </body>
 </html>
