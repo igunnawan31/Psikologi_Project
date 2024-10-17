@@ -13,9 +13,9 @@
     <section class="flex justify-center items-center py-20 m-0">
         <div class="relative flex justify-center h-[602px] w-[338px] z-10 bg-no-repeat bg-cover" style="background-image: url('{{ asset('assets/amara.svg') }}');">
             <div class="absolute top-[65px] left-[25px] w-[200px] h-[200px] flex justify-center items-center z-20 pointer-events-none">
-                <div class="relative text-[30px] font-baloo uppercase tracking-widest text-[rgb(190,105,24)]" id="displayTitle"></div>
+                <div class="relative text-[30px] font-[Baloo] uppercase tracking-widest text-[rgb(190,105,24)]" id="displayTitle"></div>
             </div>
-            <div class="absolute top-[93px] left-[33px] w-[200px] h-[200px] flex justify-center items-center rounded-full border-2 border-white text-center text-lg text-aliceblue bg-transparent overflow-hidden break-words leading-tight p-4" id="displayText">
+            <div class="absolute top-[93px] left-[33px] w-[200px] h-[200px] font-[Baloo] flex justify-center items-center rounded-full border-2 border-white text-center text-lg text-aliceblue bg-transparent overflow-hidden break-words leading-tight text-balance p-4" id="displayText">
                 Place Your Message here
             </div>
 
@@ -36,37 +36,44 @@
             </div>
         </div>
 
-        <div class="upload bg-white p-6 rounded-lg shadow-lg w-96 h-[602px] border-2 border-black ml-10">
-            <h2 class="text-xl font-bold mb-4 text-gray-700">Upload Your Text for Amara</h2>
+        <div class="upload bg-white p-2 rounded-lg shadow-lg w-96 h-[602px] border-2 border-pink-500 ml-10">
+            <h2 class="text-xl font-bold mb-4 text-pink-500">Upload Your Text for Amara</h2>
 
             <div class="mb-4">
                 <label for="upload1" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
-                <input type="file" id="upload1" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+                <input type="file" id="upload1" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload1Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
             </div>
-
+            
             <div class="mb-4">
                 <label for="upload2" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
-                <input type="file" id="upload2" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+                <input type="file" id="upload2" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload2Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
             </div>
-
+            
             <div class="mb-4">
                 <label for="upload3" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
-                <input type="file" id="upload3" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+                <input type="file" id="upload3" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload3Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
             </div>
-
+            
             <div class="mb-4">
                 <label for="upload4" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
-                <input type="file" id="upload4" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none">
+                <input type="file" id="upload4" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" onchange="validateFile(this)">
+                <span id="upload4Error" class="text-red-500 text-sm hidden">Please upload a valid image file.</span>
             </div>
-
+            
             <div class="mb-4">
                 <label for="upload5" class="block text-sm font-medium text-gray-700 mb-2">Message:</label>
-                <input type="text" id="upload5" placeholder="Place your message here" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateText()">
+                <input type="text" id="upload5" placeholder="Place your message here" maxlength="100" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateText(); validateInputs();">
+                <span id="messageError" class="text-red-500 text-sm hidden">Please enter a message (max 100 characters).</span>
+                <span id="charCount" class="text-gray-500 text-sm">0/100</span>
             </div>
-
-            <div class="">
+            
+            <div class="mb-4">
                 <label for="upload6" class="block text-sm font-medium text-gray-700 mb-2">Title:</label>
-                <input type="text" id="upload6" placeholder="Place your title here" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateTitle()">
+                <input type="text" id="upload6" placeholder="Place your title here" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg p-2.5 focus:ring-blue-500 focus:border-blue-500" oninput="updateTitle(); validateInputs();">
+                <span id="titleError" class="text-red-500 text-sm hidden">Please enter a title.</span>
             </div>
         </div>
     </section>
@@ -141,6 +148,37 @@
         document.getElementById('upload4').addEventListener('change', function () {
             uploadImage(this, document.querySelector('#foto4 img'));
         });
+
+        function validateInputs() {
+            const messageInput = document.getElementById("upload5");
+            const titleInput = document.getElementById("upload6");
+            const messageError = document.getElementById("messageError");
+            const titleError = document.getElementById("titleError");
+
+            const isMessageValid = messageInput.value.length > 0 && messageInput.value.length <= 100;
+            const isTitleValid = titleInput.value.length > 0;
+
+            messageError.classList.toggle("hidden", isMessageValid);
+            titleError.classList.toggle("hidden", isTitleValid);
+
+            return isMessageValid && isTitleValid;
+        }
+
+        function handleNext() {
+            const allFilesValid = [...document.querySelectorAll('input[type="file"]')].every(input => {
+                const file = input.files[0];
+                return file && file.type.startsWith("image/");
+            });
+
+            const inputsValid = validateInputs();
+
+            if (allFilesValid && inputsValid) {
+                window.location.href = '/createyourown/pickyourtemplates/form'; // Replace with your actual next page URL
+            } else {
+                alert("Please correct the errors before proceeding.");
+            }
+        }
     </script>
+
 </body>
 </html>
