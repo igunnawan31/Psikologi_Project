@@ -10,7 +10,8 @@
 </head>
 <body>
     <x-header></x-header>
-    <section class="flex justify-center items-center py-20 m-0">
+    <h1 class="pt-10 text-center font-bold text-2xl text-pink-500">Pick Your Template</h1>
+    <section class="flex justify-center items-center pt-10 pb-20 m-0">
         <div class="relative flex justify-center h-[602px] w-[338px] z-10 bg-no-repeat bg-cover" style="background-image: url('{{ asset('assets/amara.svg') }}');">
             <div class="absolute top-[65px] left-[25px] w-[200px] h-[200px] flex justify-center items-center z-20 pointer-events-none">
                 <div class="relative text-[30px] font-[Baloo] uppercase tracking-widest text-[rgb(190,105,24)]" id="displayTitle"></div>
@@ -37,7 +38,7 @@
         </div>
 
         <div class="upload bg-white p-2 rounded-lg shadow-lg w-96 h-[602px] border-2 border-pink-500 ml-10">
-            <h2 class="text-xl font-bold mb-4 text-pink-500">Upload Your Text for Amara</h2>
+            <h2 class="text-xl font-bold mb-4 text-pink-500 text-center">Upload Your Text for Amara</h2>
 
             <div class="mb-4">
                 <label for="upload1" class="block text-sm font-medium text-gray-700 mb-2">Upload new image</label>
