@@ -1,13 +1,16 @@
+<<<<<<< HEAD
 <footer class="py-16 bg-[#341244] text-white">
+=======
+<footer class="pt-16 bg-[#121026] text-white">
+>>>>>>> igun_branch
     <div class="mx-auto container ">
         <div class="flex flex-wrap mx-auto px-4 items-center justify-center">
             <!-- logo -->
             <div class="w-full px-4 mb-8 md:mb-0 lg:w-3/6">
                 <div class="flex flex-col gap-4 justify-start lg:items-center md:flex-row">
-                    <img src="{{ asset('assets/riung.png') }}" alt="logo Fada's" class="w-2/5 md:w-[30%] ">
+                    <img src="{{ asset('assets/logo.png') }}" alt="logo Fada's" class="w-2/5 md:w-[30%] ">
                     <div class="flex flex-col justify-center ">
                         <h1 class="font-semibold text-2xl md:text-3xl lg:text-5xl mb-1">FADA'S</h1>
-                        {{-- <p class="font-semibold text-xs md:text-sm">- Kabinet Riung Mandala</p> --}}
                     </div>
                 </div>
             </div>
