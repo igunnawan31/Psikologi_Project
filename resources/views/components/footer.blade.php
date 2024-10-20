@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<footer class="py-16 bg-[#341244] text-white">
-=======
 <footer class="pt-16 bg-[#121026] text-white">
->>>>>>> igun_branch
     <div class="mx-auto container ">
         <div class="flex flex-wrap mx-auto px-4 items-center justify-center">
             <!-- logo -->

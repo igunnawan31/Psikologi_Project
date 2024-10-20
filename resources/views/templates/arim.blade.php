@@ -41,7 +41,7 @@
     </div>
 
         <div class="upload bg-white p-3 rounded-lg shadow-lg w-96 h-[602px] border-2 border-pink-500 ml-10">
-            <h2 class="text-xl font-bold mb-4 text-pink-500 mx-auto">Upload Your Text for Arim</h2>
+            <h2 class="text-xl font-bold mb-4 text-pink-500 text-center">Upload Your Text for Arim</h2>
 
             <div class="mb-4">
                 <label for="upload1" class="block text-sm font-medium text-pink-500 mb-2">Upload new image</label>
