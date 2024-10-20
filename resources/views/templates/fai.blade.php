@@ -11,6 +11,7 @@
 </head>
 <body>
     <x-header></x-header>
+    <h1 class="pt-10 text-center font-bold text-2xl text-pink-500">Pick Your Template</h1>
     <section class="flex justify-center items-center py-20 m-0">
         <div class="relative h-[602px] w-[338px] bg-cover bg-no-repeat z-1" style="background-image: url('/assets/fai_bg.png');">
             <div class="absolute flex justify-start items-center top-[-20px] left-[20px] w-[250px] h-[200px] pointer-events-none z-index-20">
