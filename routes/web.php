@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PdfController;
@@ -61,3 +62,8 @@ Route::get('/fai', function() {
 Route::get('/devity', function() {
     return view('templates.devity');
 })->name('devity');
+
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/'); // Redirect to home or desired page
+})->name('logout');
