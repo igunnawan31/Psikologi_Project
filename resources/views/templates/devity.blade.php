@@ -7,30 +7,141 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
+    <style>
+
+        .wrapper {
+            background-image: url("assets/Devity.svg");
+            height: 602px;
+            width: 338px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .title {
+            position: absolute;
+            top: -30px; /* Adjust this based on where you want the text to appear */
+            left: 105px;
+            width: 250px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none; /* Ensure it doesn't block interaction */
+            z-index: 2;
+        }
+
+        .title-display {
+            position: relative;
+            font-family: 'Bree Serif', sans-serif;
+            font-size: 25px;
+            text-transform:none; /* Match the style in the image */
+            letter-spacing: 2px;
+            color: #800329;
+            font-weight: 800;
+        }
+
+        .text-wrapper .text-display{
+            height: 80px;
+            width: 220px;
+            position: absolute;
+            text-align: center;
+            font-size: large;
+            left: 115px;
+            top: 83px;
+            border-radius: 2%;
+            color: #af753e;
+            background-color: transparent;  
+            resize: none;
+            border: 2px solid white;
+            line-height: 1.5;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            overflow-wrap: break-word; 
+            word-wrap: break-word;     
+            word-break: break-word;    
+            overflow: hidden;
+        }
+
+        .foto{
+            position: absolute;
+            z-index: 2;
+            object-fit: fill;
+            background-color: white ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #foto1 {
+            left: 205px;
+            top: 185px;
+            width: 130px;
+            height: 140px;
+            border: 6px solid #d4c4e9;
+        }
+
+        #foto2 {
+            left: 205px;
+            top: 332px;
+            width: 130px;
+            height: 140px;
+            border: 6px solid #d4c4e9;
+        }
+
+        #foto3 {
+            left: 50px;
+            top: 215px;
+            width: 140px;
+            height: 208px;
+            border: 3px solid #d4c4e9;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        #foto4 {
+            left: 55px;
+            top: 480px;
+            width: 170px;
+            height: 115px;
+            border: 3px solid #d4c4e9;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <x-header></x-header>
     <h1 class="pt-10 text-center font-bold text-2xl text-pink-500">Pick Your Template</h1>
     <section class="flex justify-center items-center py-20 m-0">
-        <div class="relative h-[602px] w-[338px] bg-cover bg-no-repeat z-1" style="background-image: url('/assets/Devity.svg');">
-            <div class="absolute flex justify-center items-center top-[-30px] left-[105px] w-[230px] h-[200px] z-20 pointer-events-none overflow-hidden break-words leading-tight">
-                <div class="relative font-serif text-2xl font-extrabold tracking-widest text-[#800329]" id="displayTitle"></div>
+        <div class="wrapper" style="background: url(/assets/Devity.svg)" id="template">
+            <div class="title">
+                <div class="title-display" id="displayTitle"></div>
             </div>
-            <div class="absolute flex justify-center items-center w-[220px] h-[80px] text-center text-lg text-[#af753e] border-2 border-white left-[115px] top-[83px] rounded-md p-2 overflow-hidden break-words bg-transparent" id="displayText">
-                Place Your Message here
+            <div class="text-wrapper">
+                <div class="text-display" id="displayText">Place Your Message here</div>
             </div>
-
-            <div class="absolute flex justify-center items-center z-20 bg-white object-fill border-6 border-[#d4c4e9]" id="foto1" style="left: 205px; top: 185px; width: 130px; height: 140px;">
-                <img src="/assets/gambar.png" alt="foto1" class="w-full h-full object-cover">
+            <div class="foto" id="foto1">
+                <img src="/assets/gambar.png" alt="foto1">
             </div>
-            <div class="absolute flex justify-center items-center z-20 bg-white object-fill border-6 border-[#d4c4e9]" id="foto2" style="left: 205px; top: 332px; width: 130px; height: 140px;">
-                <img src="/assets/gambar.png" alt="foto2" class="w-full h-full object-cover">
+            <div class="foto" id="foto2">
+                <img src="/assets/gambar.png" alt="foto2">
             </div>
-            <div class="absolute flex justify-center items-center z-20 bg-white object-fill border-3 border-[#d4c4e9] rounded-full" id="foto3" style="left: 50px; top: 215px; width: 140px; height: 208px;">
-                <img src="/assets/gambar.png" alt="foto3" class="w-full h-full object-cover">
+            <div class="foto" id="foto3" >
+                <img src="/assets/gambar.png" alt="foto3">
             </div>
-            <div class="absolute flex justify-center items-center z-20 bg-white object-fill border-3 border-[#d4c4e9] rounded-lg" id="foto4" style="left: 55px; top: 480px; width: 170px; height: 115px;">
-                <img src="/assets/gambar.png"alt="foto4" class="w-full h-full object-cover">
+            <div class="foto" id="foto4">
+                <img src="/assets/gambar.png" alt="foto4">
             </div>
         </div>
 

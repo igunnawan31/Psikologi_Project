@@ -7,33 +7,142 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+    <style>
+
+        .wrapper {
+            background-image: url("amara.svg");
+            height: 602px;
+            width: 338px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .title {
+            position: absolute;
+            top: 65px; /* Adjust this based on where you want the text to appear */
+            left: 25px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none; /* Ensure it doesn't block interaction */
+            z-index: 2;
+        }
+
+        .title-display {
+            position: relative;
+            font-family: 'Baloo', sans-serif;
+            font-size: 30px;
+            text-transform: uppercase; /* Match the style in the image */
+            letter-spacing: 2px;
+            color: rgb(190, 105, 24);
+        }
+
+        .title-display span {
+            position: absolute;
+            transform-origin: 100px 100px; /* Origin at the center of the circle */
+        }
+
+
+        .text-wrapper .text-display{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            text-align: center;
+            font-size: large;
+            left: 33px;
+            top: 93px;
+            border-radius: 50%;
+            color: aliceblue;
+            background-color: transparent;  
+            resize: none;
+            border: 2px solid white;
+            line-height: 1.5;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            overflow-wrap: break-word; 
+            word-wrap: break-word;     
+            word-break: break-word;    
+            overflow: hidden;
+        }
+
+        .foto{
+            position: absolute;
+            z-index: 2;
+            object-fit: fill;
+            background-color: white ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #foto1 {
+            left: 170px;
+            top: 225px;
+            width: 160px;
+            height: 165px;
+            border: 8px solid rgb(247, 200, 114);
+        }
+
+        #foto2 {
+            left: 170px;
+            top: 382px;
+            width: 160px;
+            height: 165px;
+            border: 8px solid rgb(247, 200, 114);
+        }
+
+        #foto3 {
+            left: 20px;
+            top: 320px;
+            width: 140px;
+            height: 98px;
+            border: 3px solid rgb(247, 200, 114);
+        }
+
+        #foto4 {
+            left: 20px;
+            top: 420px;
+            width: 140px;
+            height: 98px;
+            border: 3px solid rgb(247, 200, 114);
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <x-header></x-header>
     <h1 class="pt-10 text-center font-bold text-2xl text-pink-500">Pick Your Template</h1>
     <section class="flex justify-center items-center pt-10 pb-20 m-0">
-        <div class="relative flex justify-center h-[602px] w-[338px] z-10 bg-no-repeat bg-cover" style="background-image: url('{{ asset('assets/amara.svg') }}');">
-            <div class="absolute top-[65px] left-[25px] w-[200px] h-[200px] flex justify-center items-center z-20 pointer-events-none">
-                <div class="relative text-[30px] font-[Baloo] uppercase tracking-widest text-[rgb(190,105,24)]" id="displayTitle"></div>
+        <div class="wrapper" style="background: url(/assets/amara.svg)" id="template">
+            <div class="title">
+                <div class="title-display" id="displayTitle"></div>
             </div>
-            <div class="absolute top-[93px] left-[33px] w-[200px] h-[200px] font-[Baloo] flex justify-center items-center rounded-full border-2 border-white text-center text-lg text-aliceblue bg-transparent overflow-hidden break-words leading-tight text-balance p-4" id="displayText">
-                Place Your Message here
+            <div class="text-wrapper">
+                <div class="text-display" id="displayText">Place Your Message here</div>
             </div>
-
-            <div id="foto1" class="absolute left-[170px] top-[225px] w-[160px] h-[165px] flex justify-center items-center border-8 border-[rgb(247,200,114)] bg-white z-20">
-                <img src="{{ asset('assets/gambar.png') }}" alt="foto1" class="object-cover w-full h-full">
+            <div class="foto" id="foto1">
+                <img src="/assets/gambar.png" alt="foto1">
             </div>
-
-            <div id="foto2" class="absolute left-[170px] top-[382px] w-[160px] h-[165px] flex justify-center items-center border-8 border-[rgb(247,200,114)] bg-white z-20">
-                <img src="{{ asset('assets/gambar.png') }}" alt="foto2" class="object-cover w-full h-full">
+            <div class="foto" id="foto2">
+                <img src="/assets/gambar.png" alt="foto2">
             </div>
-
-            <div id="foto3" class="absolute left-[20px] top-[290px] w-[140px] h-[98px] flex justify-center items-center border-3 border-[rgb(247,200,114)] bg-white z-20">
-                <img src="{{ asset('assets/gambar.png') }}" alt="foto3" class="object-cover w-full h-full">
+            <div class="foto" id="foto3" >
+                <img src="/assets/gambar.png" alt="foto3">
             </div>
-
-            <div id="foto4" class="absolute left-[20px] top-[390px] w-[140px] h-[98px] flex justify-center items-center border-3 border-[rgb(247,200,114)] bg-white z-20">
-                <img src="{{ asset('assets/gambar.png') }}" alt="foto4" class="object-cover w-full h-full">
+            <div class="foto" id="foto4">
+                <img src="/assets/gambar.png" alt="foto4">
             </div>
         </div>
 
