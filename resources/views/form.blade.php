@@ -8,6 +8,18 @@
 </head>
 <body>
     <x-header></x-header>
+    <h1 class="text-center font-bold text-2xl text-pink-500">Review Your Information</h1>
+    <section class="flex justify-center items-center">
+        <div>
+            <h3>{{ session('title') }}</h3>
+            <p>{{ session('message') }}</p>
+            <img src="{{ asset('storage/' . session('image1')) }}" alt="Image 1" />
+            <img src="{{ asset('storage/' . session('image2')) }}" alt="Image 2" />
+            <img src="{{ asset('storage/' . session('image3')) }}" alt="Image 3" />
+            <img src="{{ asset('storage/' . session('image4')) }}" alt="Image 4" />
+        </div>
+    </section>
+
     <section id="Home" class="pt-10 pb-10">
         <div class="container mx-auto">
             <div class="flex justify-center items-center text-center">
@@ -79,23 +91,18 @@
         </section>
     </form>
 
+    <script>
+        // You can access the template path here
+        const templatePath = '{{ session('template_path') }}';
+        console.log(templatePath); // Check if it's properly set
+
+        // You can also use it in a fetch call or any other logic if needed
+        document.getElementById('templatePath').addEventListener('click', function(event) {
+            // Logic for using the templatePath if necessary
+            console.log('Selected template path:', templatePath);
+        });
+    </script>
     <script src="{{ asset('js/app.js') }}"></script>
 
-    {{-- <div class="flex justify-center items-center">
-        <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-            <a href="/createyourown/pickyourtemplates">
-                <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
-                    Back
-                </h2>
-            </a>
-        </div>
-        <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
-            <a href="/createyourown/pickyourtemplates/form/preview">
-                <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
-                    Selanjutnya
-                </h2>
-            </a>
-        </div>
-    </div> --}}
 </body>
 </html>

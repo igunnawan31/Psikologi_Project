@@ -204,7 +204,7 @@
                 </a>
             </div>
             <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
-                <a id="templatePath" href="/createyourown/pickyourtemplates/form">
+                <a id="templatePath" href="/createyourown/pickyourtemplates/form" data-template-path="/template/fai">
                     <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
                         Selanjutnya
                     </h2>
@@ -295,6 +295,27 @@
                 alert("Please correct the errors before proceeding.");
             }
         }
+
+        document.getElementById('templatePath').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor click behavior
+            const templatePath = this.getAttribute('data-template-path');
+        
+            fetch('/template/fai', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}' // Add CSRF token for security
+                },
+                body: JSON.stringify({ template_path: templatePath }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = this.href; // Redirect after storing the template path
+                } else {
+                    alert('Failed to store template path.');
+                }
+            });
+        });
 
         function generatePDF() {
             var element = document.getElementById('template');

@@ -17,4 +17,30 @@ class PdfController extends Controller
         // Download the generated PDF
         return $pdf->download('amara.pdf');
     }
+
+    public function storeFaiData(Request $request)
+    {
+        // Validate inputs
+        $request->validate([
+            'title' => 'required|string|max:20',
+            'message' => 'required|string|max:100',
+            'image1' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'image2' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'image3' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'image4' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
+
+        // Store data in session
+        $request->session()->put('title', $request->input('title'));
+        $request->session()->put('message', $request->input('message'));
+        for ($i = 1; $i <= 4; $i++) {
+            if ($request->hasFile('image' . $i)) {
+                $imagePath = $request->file('image' . $i)->store('images', 'public');
+                $request->session()->put('image' . $i, $imagePath);
+            }
+        }
+
+        // Redirect to form.blade.php
+        return redirect()->route('form');
+    }
 }
