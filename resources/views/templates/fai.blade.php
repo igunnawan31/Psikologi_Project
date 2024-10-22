@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
     <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <style>
 
         .wrapper {
@@ -209,6 +210,9 @@
                     </h2>
                 </a>
             </div>
+            <div class="text-center" style="padding:20px;">
+                <input type="button" id="rep" value="Print" class="btn btn-info btn_print" onclick="generatePDF()">
+            </div>
         </div>
     </section>
 
@@ -290,6 +294,19 @@
             } else {
                 alert("Please correct the errors before proceeding.");
             }
+        }
+
+        function generatePDF() {
+            var element = document.getElementById('template');
+            var opt = {
+                margin:       0,
+                filename:     'generated_template.pdf',
+                image:        { type: 'jpeg', quality: 1 },
+                html2canvas:  { scale: 4 },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            html2pdf().set(opt).from(element).save();
         }
     </script>
 </body>
