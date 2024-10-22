@@ -203,8 +203,9 @@
                 </h2>
             </a>
         </div>
-        <div class="text-center" style="padding:20px;">
-            <input type="button" id="rep" value="Print" class="btn btn-info btn_print" onclick="generatePDF()">
+        <div class="print" >
+            <input type="button" id="rep" value="Print" class="btn btn-info btn_print w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg 
+            text-center font-bold text-xl flex items-center justify-center text-white cursor-pointer" onclick="generatePDF()">
         </div>
     </div>
 </section>
