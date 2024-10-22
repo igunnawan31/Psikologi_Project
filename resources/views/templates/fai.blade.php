@@ -8,37 +8,147 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
     <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
+    <style>
+
+        .wrapper {
+            background-image: url("fai_bg.png");
+            height: 602px;
+            width: 338px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .title {
+            position: absolute;
+            top: 60px; /* Adjust this based on where you want the text to appear */
+            left: 20px;
+            width: 250px;
+            height: 200px;
+            display: flex;
+            justify-content: left;
+            text-align: left;
+            pointer-events: none; /* Ensure it doesn't block interaction */
+            z-index: 2;
+            transform: rotate(-4deg);
+        }
+
+        .title-display {
+            position: relative;
+            font-family: 'Mistrully', sans-serif;
+            font-size: 25px;
+            text-transform:none; /* Match the style in the image */
+            letter-spacing: 2px;
+            color: #9d4b3b;
+            font-weight: 800;
+        }
+
+        .text-wrapper .text-display{
+            height: 180px;
+            width: 180px;
+            position: absolute;
+            text-align: center;
+            font-size: large;
+            left: 145px;
+            top: 283px;
+            border-radius: 2%;
+            color: #6e6e6e;
+            background-color: white;  
+            resize: none;
+            border: 2px solid white;
+            line-height: 1.5;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            overflow-wrap: break-word; 
+            word-wrap: break-word;     
+            word-break: break-word;    
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .foto{
+            position: absolute;
+            z-index: 2;
+            object-fit: fill;
+            background-color: white ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #foto1 {
+            left: 0px;
+            top: 85px;
+            width: 338px;
+            height: 240px;
+            z-index: 1;
+        }
+
+        #foto2 {
+            left: 25px;
+            top: 215px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
+        }
+
+        #foto3 {
+            left: 25px;
+            top: 315px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
+        }
+
+        #foto4 {
+            left: 25px;
+            top: 415px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #ffffff;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .decor{
+            background: transparent;
+            z-index: 4;
+        }
+    </style>
 </head>
 <body>
     <x-header></x-header>
     <h1 class="pt-10 text-center font-bold text-2xl text-pink-500">Pick Your Template</h1>
     <section class="flex justify-center items-center py-20 m-0">
-        <div class="relative h-[602px] w-[338px] bg-cover bg-no-repeat z-1" style="background-image: url('/assets/fai_bg.png');">
-            <div class="absolute flex justify-start items-center top-[-20px] left-[20px] w-[250px] h-[200px] pointer-events-none z-index-20">
-                <div id="displayTitle" class="relative font-[Mistrully] text-[25px] tracking-wider text-[#9d4b3b] font-extrabold -rotate-6 transform z-20">Judul</div>
+        <div class="wrapper" style="background: url(/assets/fai_bg.png)">
+            <div class="title">
+                <div class="title-display" id="displayTitle">Judul</div>
             </div>
-            <div class="absolute left-[145px] top-[283px] w-[180px] h-[180px] bg-white text-[#6e6e6e] text-lg border-2 border-white rounded-md flex justify-center items-center text-center z-20 p-2 break-words overflow-hidden">
-                <div id="displayText">Place Your Message here</div>
+            <div class="text-wrapper">
+                <div class="text-display" id="displayText">Place Your Message here</div>
             </div>
-    
-            <div id="foto1" class="absolute left-0 top-[85px] w-[338px] h-[240px] z-10">
-                <img src="/assets/gambar.png" alt="foto1" class="object-cover w-full h-full">
+            <div class="foto" id="foto1">
+                <img src="/assets/gambar.png" alt="foto1">
             </div>
-    
-            <div id="foto2" class="absolute left-[25px] top-[215px] w-[100px] h-[100px] z-20 border-4 border-white">
-                <img src="/assets/gambar.png"  alt="foto2" class="object-cover w-full h-full">
+            <div class="foto" id="foto2">
+                <img src="/assets/gambar.png" alt="foto2">
             </div>
-    
-            <div id="foto3" class="absolute left-[25px] top-[315px] w-[100px] h-[100px] z-20 border-4 border-white">
-                <img src="/assets/gambar.png"  alt="foto3" class="object-cover w-full h-full">
+            <div class="foto" id="foto3" >
+                <img src="/assets/gambar.png" alt="foto3">
             </div>
-    
-            <div id="foto4" class="absolute left-[25px] top-[415px] w-[100px] h-[100px] z-20 border-4 border-white">
-                <img src="/assets/gambar.png"  alt="foto4" class="object-cover w-full h-full">
+            <div class="foto" id="foto4">
+                <img src="/assets/gambar.png" alt="foto4">
             </div>
-    
-            <div class="absolute z-30 bg-transparent">
-                <img src="/assets/decor_fai.png" alt="decor" class="w-full h-full">
+            <div class="decor" id="foto5">
+                <img src="/assets/decor_fai.png" alt="foto4">
             </div>
         </div>
 

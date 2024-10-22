@@ -8,34 +8,158 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
     <link href="https://fonts.cdnfonts.com/css/mistrully" rel="stylesheet">
+    <style>
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        } */
+
+        .wrapper {
+            background-image: url("assets/Arim.svg");
+            height: 602px;
+            width: 338px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            position: absolute;
+            top: 160px; /* Adjust this based on where you want the text to appear */
+            left: 115px;
+            width: 240px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none; /* Ensure it doesn't block interaction */
+            z-index: 2;
+        }
+
+        .title-display {
+            position: relative;
+            font-family: 'Baloo', sans-serif;
+            font-size: 35px;
+            text-transform: none; /* Match the style in the image */
+            letter-spacing: 1px;
+            color: #af753e;
+            text-align: center;
+            line-height: 1;
+            font-weight: bold;
+            overflow-wrap: break-word; 
+            word-wrap: break-word;     
+            word-break: break-word;    
+            overflow: hidden;
+            text-shadow: 2px 2px #ffffff ;
+        }
+
+        .text-wrapper .text-display{
+            height: 180px;
+            width: 220px;
+            font-family: 'Mistrully', sans-serif;
+            position: absolute;
+            text-align: center;
+            font-size: large;
+            left: 93px;
+            top: 270px;
+            border-radius: 2%;
+            color: #af753e;
+            background-color: transparent;  
+            resize: none;
+            border: 2px solid white;
+            line-height: 1.5;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            overflow-wrap: break-word; 
+            word-wrap: break-word;     
+            word-break: break-word;    
+            overflow: hidden;
+        }
+
+        .foto{
+            position: absolute;
+            z-index: 2;
+            object-fit: fill;
+            background-color: white ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #foto1 {
+            left: 200px;
+            top: 15px;
+            width: 120px;
+            height: 120px;
+            border: 6px solid #d3a274;
+        }
+
+        #foto2 {
+            left: 105px;
+            top: 82px;
+            width: 120px;
+            height: 120px;
+            border: 3px solid #d3a274;
+            z-index: 3;
+        }
+
+        #foto3 {
+            left: 5px;
+            top: 248px;
+            width: 110px;
+            height: 110px;
+            border: 3px solid #d3a274;
+            transform: rotate(-5deg);
+        }
+
+        #foto4 {
+            left: 15px;
+            top: 355px;
+            width: 110px;
+            height: 110px;
+            border: 3px solid #d3a274;
+            transform: rotate(-5deg);
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
 </head>
 <body>
     <x-header></x-header>
     <h1 class="pt-10 text-center font-bold text-2xl text-pink-500">Pick Your Template</h1>
     <section class="flex justify-center items-center py-20 m-0">
     <div class="h-[602px] w-[338px] overflow-hidden">
-        <div class="relative h-[602px] w-[338px] bg-cover bg-no-repeat z-1" style="background-image: url('/assets/Arim.svg');">
-            <div class="absolute flex justify-center items-center top-[160px] left-[120px] w-[240px] h-[200px] pointer-events-none z-2">
-                <div id="displayTitle" class="relative font-[Baloo] font-bold text-[#af753e] text-[35px] leading-none tracking-[1px] text-left uppercase drop-shadow-xl break-words z-20"></div>
+        <div class="wrapper" style="background: url(/assets/arim.svg)" id="template">
+            <div class="title">
+                <div class="title-display" id="displayTitle"></div>
             </div>
-            <div class="absolute font-[Mistrully] left-[93px] top-[270px] w-[220px] h-[180px] bg-transparent text-[#af753e] text-lg border-2 border-white rounded-md flex justify-center items-center text-center font-mistrully break-words">
-                <div id="displayText">Place Your Message here</div>
+            <div class="text-wrapper">
+                <div class="text-display" id="displayText">Place Your Message here</div>
             </div>
-    
-            <div id="foto1" class="absolute left-[200px] top-[15px] w-[120px] h-[120px] border-4 border-[#d3a274] bg-white z-2 flex justify-center items-center">
-                <img src="/assets/gambar.png" alt="foto1" class="object-cover w-full h-full">
+            <div class="foto" id="foto1">
+                <img src="/assets/gambar.png" alt="foto1">
             </div>
-    
-            <div id="foto2" class="absolute left-[105px] top-[82px] w-[120px] h-[120px] border-2 border-[#d3a274] bg-white z-3 flex justify-center items-center">
-                <img src="/assets/gambar.png" alt="foto2" class="object-cover w-full h-full">
+            <div class="foto" id="foto2">
+                <img src="/assets/gambar.png" alt="foto2">
             </div>
-    
-            <div id="foto3" class="absolute left-[0px] top-[248px] w-[110px] h-[110px] border-2 border-[#d3a274] bg-white z-2 flex justify-center items-center rotate-[-3deg]">
-                <img src="/assets/gambar.png" alt="foto3" class="object-cover w-full h-full">
+            <div class="foto" id="foto3" >
+                <img src="/assets/gambar.png" alt="foto3">
             </div>
-    
-            <div id="foto4" class="absolute left-[5px] top-[355px] w-[110px] h-[110px] border-2 border-[#d3a274] bg-white z-2 flex justify-center items-center rotate-[-3deg]">
-                <img src="/assets/gambar.png" alt="foto4" class="object-cover w-full h-full">
+            <div class="foto" id="foto4">
+                <img src="/assets/gambar.png" alt="foto4">
             </div>
         </div>
     </div>
@@ -96,6 +220,9 @@
                         Selanjutnya
                     </h2>
                 </a>
+            </div>
+            <div class="text-center" style="padding:20px;">
+                <input type="button" id="rep" value="Print" class="btn btn-info btn_print">
             </div>
         </div>
     </section>
