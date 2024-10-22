@@ -320,14 +320,25 @@
 
         function generatePDF() {
             var element = document.getElementById('template');
-            var opt = {
-                margin:       0,
-                filename:     'generated_template.pdf',
-                image:        { type: 'jpeg', quality: 1 },
-                html2canvas:  { scale: 4 },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+            var widthInInches = 3.5208333333333335; // Default A4 width
+            var heightInInches = 6.270833333333333; // Default A4 height
+            var scaleFactor = 1;
             
+            var opt = {
+                margin: 0,
+                filename: 'scaled_template.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { 
+                    scale: 8, 
+                },
+                jsPDF: {
+                    unit: 'in', 
+                    format: [widthInInches * scaleFactor, heightInInches * scaleFactor], // Scale the A4 size
+                    orientation: 'portrait'
+                }
+            };
+        
+            // Generate the PDF
             html2pdf().set(opt).from(element).save();
         }
     </script>
