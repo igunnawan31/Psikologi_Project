@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreTemplateRequest;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\File;
 
@@ -16,5 +17,9 @@ class PdfController extends Controller
         
         // Download the generated PDF
         return $pdf->download('amara.pdf');
+    }
+
+    public function store(StorePdfRequest $request){
+        
     }
 }
