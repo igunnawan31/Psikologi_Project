@@ -18,6 +18,7 @@
             display: flex;
             justify-content: center;
             position: relative;
+            overflow: hidden;
         }
 
         .title {
@@ -126,7 +127,7 @@
     <x-header></x-header>
     <h1 class="pt-10 text-center font-bold text-2xl text-pink-500">Pick Your Template</h1>
     <section class="flex justify-center items-center pt-10 pb-20 m-0">
-        <div class="wrapper" style="background: url(/assets/amara.svg)" id="template">
+        <div class="wrapper" style="background: url(/assets/amara.svg)" id="template" id="">
             <div class="title">
                 <div class="title-display" id="displayTitle"></div>
             </div>
@@ -295,14 +296,25 @@
 
         function generatePDF() {
             var element = document.getElementById('template');
-            var opt = {
-                margin:       0,
-                filename:     'generated_template.pdf',
-                image:        { type: 'jpeg', quality: 1 },
-                html2canvas:  { scale: 4 },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+            var widthInInches = 3.5208333333333335; // Default A4 width
+            var heightInInches = 6.270833333333333; // Default A4 height
+            var scaleFactor = 1;
             
+            var opt = {
+                margin: 0,
+                filename: 'scaled_template.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { 
+                    scale: 8, 
+                },
+                jsPDF: {
+                    unit: 'in', 
+                    format: [widthInInches * scaleFactor, heightInInches * scaleFactor], // Scale the A4 size
+                    orientation: 'portrait'
+                }
+            };
+        
+            // Generate the PDF
             html2pdf().set(opt).from(element).save();
         }
     </script>
