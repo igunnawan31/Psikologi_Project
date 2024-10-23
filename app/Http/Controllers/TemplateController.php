@@ -30,7 +30,7 @@ class TemplateController extends Controller
      */
     public function store(StoreTemplateRequest $request)
     {
-        //
+        
     }
 
     /**
@@ -64,5 +64,15 @@ class TemplateController extends Controller
     public function destroy(Template $template)
     {
         //
+    }
+
+    public function storeTemplatePath(Request $request) {
+        $request->validate([
+        'template_path' => 'required|string',
+        ]);
+
+        session(['template_path' => $request->template_path]);
+
+        return response()->json(['succes' => true]);
     }
 }

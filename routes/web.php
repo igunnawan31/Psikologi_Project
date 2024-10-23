@@ -21,13 +21,15 @@ Route::get('/createyourown', [UserController::class, 'showCreate']);
 Route::get('/login', [UserController::class, 'showLogin']);
 Route::get('/createyourown/pickyourtemplates', [UserController::class, 'showtemplates']);
 Route::get('/createyourown/pickyourtemplates/form', [UserController::class, 'showform']);
+Route::post('/pesanans', [PesananController::class, 'store'])->name('pesanans.store');
 // Route::get('/createyourown/pickyourtemplates/form/preview', [UserController::class, 'showPreview'])->name('showPreview');
-Route::get('/createyourown/pickyourtemplates/form/payment', [UserController::class, 'showpayment']);
+Route::get('/createyourown/pickyourtemplates/form/payment', [UserController::class, 'showpayment'])->name('payment');
 // Route::get('/createyourown/pickyourtemplates/form/preview', [PesananController::class, 'preview'])->name('preview');
 
 Route::get('auth/google', [GoogleController::class, 'googlepage']);
 Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
 
+Route::post('/storePayment', [PesananController::class, 'storePayment'])->name('store.payment');
 Route::post('/sendEmail', [EmailController::class,'sendEmail']) -> name('send.email');
 Route::get('/generatePdf', [PdfController::class, 'generatePDF']) -> name('generate.pdf');
 Route::get('/contact', function() {

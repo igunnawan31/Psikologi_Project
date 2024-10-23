@@ -201,9 +201,7 @@
             </div>
             <div class="w-48 h-14 bg-gradient-to-r from-[#A47EFD] to-[#FF88E6] border-white border-2 rounded-lg ">
                 <a id="templatePath" href="/createyourown/pickyourtemplates/form">
-                    <h2 class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer">
-                        Selanjutnya
-                    </h2>
+                    <input type="button" id="templatePath" value="Selanjutnya" class="text-center font-bold text-xl flex items-center justify-center h-full text-white cursor-pointer" onclick="handleSelanjutnya()">
                 </a>
             </div>
             <div class="text-center" style="padding:20px;">
@@ -316,6 +314,55 @@
         
             // Generate the PDF
             html2pdf().set(opt).from(element).save();
+        }
+
+        function handleSelanjutnya() {
+            // Validate inputs before sending data
+            const allFilesValid = [...document.querySelectorAll('input[type="file"]')].every(input => {
+                const file = input.files[0];
+                return file && file.type.startsWith("image/");
+            });
+        
+            const inputsValid = validateInputs();
+        
+            if (allFilesValid && inputsValid) {
+                // Prepare data to send
+                const formData = new FormData();
+                formData.append('message', document.getElementById('upload5').value);
+                formData.append('title', document.getElementById('upload6').value);
+                
+                // Add images
+                for (let i = 1; i <= 4; i++) {
+                    const fileInput = document.getElementById(`upload${i}`);
+                    if (fileInput.files[0]) {
+                        formData.append(`images[]`, fileInput.files[0]);
+                    }
+                }
+        
+                // Generate PDF
+                generatePDF();
+        
+                // Send data to the server
+                fetch('/createyourown/pickyourtemplates/form', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}', // Ensure you include the CSRF token for security
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response from the server
+                    console.log(data);
+                    alert('Data has been saved and PDF generated!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error saving the data.');
+                });
+            } else {
+                alert("Please correct the errors before proceeding.");
+            }
         }
     </script>
 
