@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\File;
 
@@ -29,7 +30,7 @@ class PdfController extends Controller
             'image3' => 'required|image|mimes:jpg,jpeg,png|max:2048',
             'image4' => 'required|image|mimes:jpg,jpeg,png|max:2048',
         ]);
-
+    
         // Store data in session
         $request->session()->put('title', $request->input('title'));
         $request->session()->put('message', $request->input('message'));
@@ -39,8 +40,8 @@ class PdfController extends Controller
                 $request->session()->put('image' . $i, $imagePath);
             }
         }
-
-        // Redirect to form.blade.php
-        return redirect()->route('form');
+    
+        // Redirect directly to payment.blade.php
+        return redirect()->route('payment');
     }
 }
